@@ -3,30 +3,137 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a6f9fb69fc.js" crossorigin="anonymous"></script><!--lien d'insertion des icônes Font awesome--> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"><!--lien d'insertion de la police Raleway-->
+        
+
+
+
+
+        
         <title>RESERVIA</title>
+
     </head>
 
     <body>
 
      <header>
-         <h1>Reservia</h1>
-            <nav>
-                <div>
-                    <ul>
-                        <li><a href="#hebergements">Hébergements</a></li>
-                        <li><a href="#activites">Activités</a></li>
-                        <li>S'inscrire</li><!--à corriger-->
-                    </ul>
-
-                </div>
-            </nav>
+         <h1><img src="images_reservia/logo/Reservia@3x.png" alt="logo reservia"/></h1><!--insertion logo reservia-->
+         <nav>
+            <div>
+                <ul class="menu">
+                    <li><a href="#hebergements">Hébergements</a></li>
+                    <li><a href="#activites">Activités</a></li>
+                    <li><a href="#">S'inscrire</a></li><!--à corriger-->
+                </ul>
+            </div>
+         </nav>
           <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
           <p>En plein centre ville ou en pleine nature</p>
+          <div>
+              <p><i class="fas fa-map-marker-alt"></i> Marseille, France</p><!--créer bouton Rechercher-->
+          </div>
+          <div>Filtres 
+              <i class="fas fa-money-bill-wave"></i> <span>Economique</span>
+              <i class="fas fa-child"></i> <span>Familial</span> <!--insertion des différentes icônes-->
+              <i class="fas fa-heart"></i> <span>Romantique</span>
+              <i class="fas fa-dog"></i> <span>Animaux autorisés</span></div>
+          <div>
+            <p><i class="fas fa-info-circle"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+          </div>
 
      </header>
-     <section></section>
-     <section></section>
-     <footer></footer>
+     <section>
+        <h2 id="hebergements">Hébergements à Marseille</h2>
+           <article>
+               <div>
+                   <img src="images_reservia/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge de la Cannebière" />
+               </div>
+               <div>
+                   <img src="images_reservia/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Hôtel du port" />
+               </div>
+               <div>
+                   <img src="images_reservia/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel Les Mouettes" />
+               </div>
+               <div>
+                   <img src="images_reservia/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Hôtel de la mer" />
+               </div>
+               <div>
+                   <img src="images_reservia/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge Le Panier" />
+               </div>
+               <div>
+                   <img src="images_reservia/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina" />
+               </div>
+               <p>Afficher plus</p>
+           </article>
+        <aside>
+            <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> <!--création de l'aside, complémentaire à la section; à revoir pour correction-->
+              <div>
+                  <img src="images_reservia/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin" /><!--insertion des images-->
+              </div>
+              <div>
+                  <img src="images_reservia/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes" />
+              </div>
+              <div>
+                  <img src="images_reservia/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc" />
+              </div>
+
+
+        </aside>
+
+     </section>
+     
+     <section class="marseille">
+         <h2 id="activites">Activités à Marseille</h2>
+         <div class="vieux_port">
+             <img src="images_reservia/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
+         </div>
+         <div class="fort_de_pomegues">
+             <div>
+                 <img src="images_reservia/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
+             </div>
+             <div>
+                 <img src="images_reservia/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" />
+             </div>
+         </div>
+         <div class="parc_national">
+             <img src="images_reservia/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" />
+         </div>
+         <div class="notre_dame">
+             <div>
+                 <img src="images_reservia/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" />
+             </div>
+             <div>
+                 <img src="images_reservia/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
+             </div>
+         </div>
+     </section>
+     <footer>
+        <nav><!--création du pieds de page avec différents liens de navigation-->
+            <div>A propos
+                <ul>
+                    <li>Fonctionnement du site</li>
+                    <li>Conditions générales de vente</li>
+                    <li>Données et confidentialité</li>
+                </ul>
+            </div>
+            <div>Nos Hébergements
+                <ul>
+                    <li>Charte qualité</li>
+                    <li>Soumettre votre hôtel</li>
+                </ul>
+            </div>
+            <div>Assistance
+                <ul>
+                    <li>Centre d'aide</li>
+                    <li>Nous contacter</li>
+                </ul>
+            </div>
+        </nav>
+
+
+     </footer>
 
     </body>
 </html>
