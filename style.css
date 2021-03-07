@@ -1,4 +1,74 @@
 body 
 {
     font-family: 'Raleway', sans-serif;
+    margin: 0px;
 }
+.en_tete
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.menu
+{
+    display: flex; /*flexbox pour l'en-tête*/
+    flex-direction: row;
+    margin: 20px;
+}
+.li1
+{
+    text-decoration: overline;/*surlignement de hebergement*/
+    color: #0065FC;
+    
+}
+ul {
+    list-style-type: none;/*pas de style de liste à puces*/
+}
+#rechercher
+{
+    background-color: #0065FC;/*stylisation bouton Rechercher. A corriger*/
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    margin: auto;
+
+}
+
+
+.section_une 
+{
+    display: flex;/*activation flexbox*/
+    flex-direction: row;
+    
+}
+.blocB
+{
+ background-color: #F2F2F2;
+ border: 1px solid none;
+ border-radius: 20px; /*arrondissement de la bordure*/
+ margin: 10px 10px;/**/
+ padding-left: 20px;
+}
+.etoile
+{
+    color: #0065FC;
+}
+.hotel_soleil
+{
+    border: 3px solid white;
+    border-radius: 20px;
+    text-align: justify;
+    padding: 0px;
+}
+.premier_paragraphe
+{
+    font-weight: bold;
+}
+/*.soleil_du_matin 
+{
+    float: left;
+    margin: 6px 6px;
+    
+}*/
+
+

@@ -19,20 +19,26 @@
     <body>
 
      <header>
-         <h1><img src="images_reservia/logo/Reservia@3x.png" alt="logo reservia"/></h1><!--insertion logo reservia-->
-         <nav>
-            <div>
-                <ul class="menu">
-                    <li><a href="#hebergements">Hébergements</a></li>
-                    <li><a href="#activites">Activités</a></li>
-                    <li><a href="#">S'inscrire</a></li><!--à corriger-->
-                </ul>
-            </div>
-         </nav>
+         <div class="en_tete">
+            <h1><img src="images_reservia/logo/Reservia@3x.png" alt="logo reservia"/></h1><!--insertion logo reservia-->
+            <nav >
+                <div>
+                    <ul class="menu">
+                        <li class="li1"><a href="#hebergements">Hébergements</a></li>
+                        <li><a href="#activites">Activités</a></li>
+                        <li><a href="#">S'inscrire</a></li><!--à corriger-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
           <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
           <p>En plein centre ville ou en pleine nature</p>
           <div>
-              <p><i class="fas fa-map-marker-alt"></i> Marseille, France</p><!--créer bouton Rechercher-->
+            <form>
+              <p><i class="fas fa-map-marker-alt"></i> Marseille, France <input type="text" name="rechercher" id="rechercher" value="Rechercher"></p><!--création bouton Rechercher-->
+            </form>
+              
           </div>
           <div>Filtres 
               <i class="fas fa-money-bill-wave"></i> <span>Economique</span>
@@ -44,9 +50,10 @@
           </div>
 
      </header>
-     <section>
-        <h2 id="hebergements">Hébergements à Marseille</h2>
-           <article>
+     <section class="section_une">
+        <article class="blocA">
+         <h2 id="hebergements">Hébergements à Marseille</h2>
+        
                <div>
                    <img src="images_reservia/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Auberge de la Cannebière" />
                </div>
@@ -65,66 +72,71 @@
                <div>
                    <img src="images_reservia/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Hôtel chez Amina" />
                </div>
-               <p>Afficher plus</p>
-           </article>
-        <aside>
+               <div><p>Afficher plus</p></div>
+        </article>
+        
+        <aside class="blocB">
             <h2>Les plus populaires <i class="fas fa-chart-line"></i></h2> <!--création de l'aside, complémentaire à la section; à revoir pour correction-->
-              <div>
-                  <img src="images_reservia/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Hôtel Le soleil du matin" /><!--insertion des images-->
+              <div class="hotel_soleil">
+                 <p class="premier_paragraphe"><img src="images_reservia/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" class="soleil_du_matin" alt="Hôtel Le soleil du matin" />Hôtel Le soleil du matin</p><!--insertion des images-->
+                 <p>Nuit à partir de 128<i class="fas fa-euro-sign"></i></p>
+                 <p class="etoile"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p><!--insertion des étoiles et création de la classe dans le paragraphe pour la couleur des étoiles en CSS-->
               </div>
               <div>
-                  <img src="images_reservia/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes" />
+                  <p><img src="images_reservia/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Au coeur de l'eau Chambres d'hôtes" /><br />Au coeur de l'eau<br />Chambres d'hôtes</p>
+        
               </div>
               <div>
                   <img src="images_reservia/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Hôtel Tout bleu et Blanc" />
               </div>
-
-
         </aside>
 
      </section>
      
-     <section class="marseille">
+     <section class="section_deux">
          <h2 id="activites">Activités à Marseille</h2>
-         <div class="vieux_port">
-             <img src="images_reservia/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
-         </div>
-         <div class="fort_de_pomegues">
-             <div>
-                 <img src="images_reservia/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
-             </div>
-             <div>
-                 <img src="images_reservia/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" />
-             </div>
-         </div>
-         <div class="parc_national">
-             <img src="images_reservia/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" />
-         </div>
-         <div class="notre_dame">
-             <div>
-                 <img src="images_reservia/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" />
-             </div>
-             <div>
-                 <img src="images_reservia/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
-             </div>
-         </div>
+            <div class="vieux_port">
+                <img src="images_reservia/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
+            </div>
+            <div class="fort_de_pomegues">
+                <div>
+                    <img src="images_reservia/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
+                </div>
+                <div>
+                    <img src="images_reservia/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" />
+                </div>
+            </div>
+            <div class="parc_national">
+                <img src="images_reservia/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" />
+            </div>
+            <div class="notre_dame">
+                <div>
+                    <img src="images_reservia/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" />
+                </div>
+                <div>
+                    <img src="images_reservia/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
+                </div>
+            </div>
      </section>
-     <footer>
-        <nav><!--création du pieds de page avec différents liens de navigation-->
-            <div>A propos
+     <footer class="bas_de_page">
+        <nav ><!--création du pieds de page avec différents liens de navigation-->
+            <div>
+            <h3>A propos</h3>
                 <ul>
                     <li>Fonctionnement du site</li>
                     <li>Conditions générales de vente</li>
                     <li>Données et confidentialité</li>
                 </ul>
             </div>
-            <div>Nos Hébergements
+            <div>
+            <h3>Nos Hébergements</h3>
                 <ul>
                     <li>Charte qualité</li>
                     <li>Soumettre votre hôtel</li>
                 </ul>
             </div>
-            <div>Assistance
+            <div>
+            <h3> Assistance</h3>
                 <ul>
                     <li>Centre d'aide</li>
                     <li>Nous contacter</li>
