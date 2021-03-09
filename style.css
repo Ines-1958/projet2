@@ -5,15 +5,14 @@ body
 }
 .en_tete
 {
-    display: flex;
+    display: flex; /*flexbox pour l'en-tête*/
     flex-direction: row;
-    
 }
 .menu
 {
-    display: flex; /*flexbox pour l'en-tête*/
+    display: flex; /*flexbox pour les nav*/
     flex-direction: row;
-    margin: 20px;
+    
 }
 .li1
 {
@@ -33,21 +32,49 @@ ul {
     margin: auto;
 
 }
-
+.photos_blocA /*je définis les tailles des photos afin de les redimensionner*/
+{
+    width: 180px;
+    height: 70px;
+}
+.photos_blocB /*redimensionne les photos du bloc B*/
+{
+    width: 100px;
+    height: 120px;
+}
+.hotels_blocA
+{
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;/*flexbox pour chaque hôtel*/
+    flex-direction: column;
+    /*padding-right: -300px;*/
+   /* width: 180px;/*largeur de la bordure pour chaque bloc*/
+}
 
 .section_une 
 {
-    display: flex;/*activation flexbox*/
-    flex-direction: row;
-    
+ display: flex;/*activation flexbox*/
+ flex-direction: row;
+ width: 100%;
+ border: 2px solid red;
+ padding: 5px;
+}
+.blocA
+{
+    background-color: #F2F2F2;
+    border: 1px solid none;
+    border-radius: 20px;
+    width: 70%;
 }
 .blocB
 {
  background-color: #F2F2F2;
  border: 1px solid none;
  border-radius: 20px; /*arrondissement de la bordure*/
- margin: 10px 10px;/**/
- padding-left: 20px;
+ width: 30%;
+ /*margin: 10px 10px;
+ padding-left: 20px;*/
 }
 .etoile
 {
@@ -60,14 +87,19 @@ ul {
     text-align: justify;
     padding: 0px;
 }
-.premier_paragraphe
+.soleil_du_matin {
+    width: 200px;
+    height: 200px;
+}
+/*.premier_paragraphe
 {
     font-weight: bold;
-}
+}*/
 /*.soleil_du_matin 
 {
     float: left;
-    margin: 6px 6px;
+    margin: 6px 6px; donner taille de l'image
+    utiliser flex
     
 }*/
 
