@@ -14,13 +14,18 @@ body
     flex-direction: row;
     
 }
+a {
+    text-decoration: none;
+}
 .li1
 {
-    text-decoration: overline;/*surlignement de hebergement*/
-    color: #0065FC;
+    /*text-decoration: overline;/*surlignement de hebergemen
+    color: #0065FC;*/
+    border-top: 2px solid #0065FC ;
     
 }
-ul {
+ul 
+{
     list-style-type: none;/*pas de style de liste à puces*/
 }
 #rechercher
@@ -34,17 +39,20 @@ ul {
 }
 .photos_blocA /*je définis les tailles des photos afin de les redimensionner*/
 {
-    width: 180px;
-    height: 70px;
+    width: 232px;/*largeur des photos du bloc*/
+    height: 120px;/*hauteur des photos du bloc*/
+    border-top: 1px solid none;/*bordures desphotos*/
+    border-top-left-radius: 20px;/*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;/*arrondissement de la bordure haut à droite*/
 }
 .photos_blocB /*redimensionne les photos du bloc B*/
 {
-    width: 100px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
 }
 .hotels_blocA
 {
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 20px;
     display: flex;/*flexbox pour chaque hôtel*/
     flex-direction: column;
@@ -54,43 +62,74 @@ ul {
 
 .section_une 
 {
- display: flex;/*activation flexbox*/
+ display: flex;/*activation flexbox sur blocA et blocB*/
  flex-direction: row;
+ justify-content: space-between;
  width: 100%;
  border: 2px solid red;
- padding: 5px;
+/* padding: 5px;*/
 }
+
 .blocA
 {
     background-color: #F2F2F2;
     border: 1px solid none;
     border-radius: 20px;
-    width: 70%;
+    width: 69%;/*le blocA occupe 69% de la page*/
+    display: flex;/*flexbox pour hébergement pour hebergements et blocA1*/
+    flex-direction: column;
+}
+.blocA1
+{
+    display: flex;/*flexbox sur hôtels_blocA*/
+    flex-direction: row;
+    /*justify-content: space-evenly;*/
+    flex-wrap: wrap;
+}
+.blocA1>div{
+    margin: 25px;
+    width: 25%;
 }
 .blocB
 {
  background-color: #F2F2F2;
  border: 1px solid none;
  border-radius: 20px; /*arrondissement de la bordure*/
- width: 30%;
- /*margin: 10px 10px;
- padding-left: 20px;*/
+ width: 29%;/*le blocB occupe 29% de la page*/
+ display: flex;
+ flex-direction: column;/*activation flexbox pour le blocB et les plus populaires*/
+ justify-content: start;
 }
-.etoile
+.blocB1
+{
+    display:flex;/*flexbox sur les hôtels_blocB*/
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.blocB1>div
+{
+    margin: 25px;
+    
+}
+ /*margin: 10px 10px;
+ padding-left: 20px;
+}*/
+.etoile_bleue /*définition de la couleur bleu pour toutes les classes etoile_bleue*/
 {
     color: #0065FC;
 }
-.hotel_soleil
+.etoile_grise
+{
+    color:silver;
+}
+/*.hotel_soleil
 {
     border: 3px solid white;
     border-radius: 20px;
     text-align: justify;
     padding: 0px;
-}
-.soleil_du_matin {
-    width: 200px;
-    height: 200px;
-}
+}*/
+
 /*.premier_paragraphe
 {
     font-weight: bold;
@@ -102,5 +141,6 @@ ul {
     utiliser flex
     
 }*/
+
 
 
