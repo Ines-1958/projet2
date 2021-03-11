@@ -31,12 +31,27 @@
                 </div>
             </nav>
          </div>
+        
+         <div class="en_tete_mobile">
+            <h1><img src="images_reservia/logo/Reservia@3x.png" alt="logo reservia"/></h1><!--insertion logo reservia-->
+            <nav >
+                <div>
+                    <ul class="menu">
+                        <li class="li1"><a href="#hebergements">Hébergements</a></li>
+                        <li><a href="#activites">Activités</a></li>
+                        <li><a href="#">S'inscrire</a></li><!--à corriger-->
+                    </ul>
+                </div>
+            </nav>
+         </div>
 
           <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
           <p>En plein centre ville ou en pleine nature</p>
           <div>
             <form>
-              <p><i class="fas fa-map-marker-alt"></i> Marseille, France <input type="text" name="rechercher" id="rechercher" value="Rechercher"></p><!--création bouton Rechercher-->
+              <div><i class="fas fa-map-marker-alt"></i> <input type="text" placeholder="Marseille, France" name="rechercher" id="rechercher" />
+                <button type="submit">rechercher</button><!--création bouton Rechercher-->
+              </div>
             </form>
               
           </div>
@@ -53,69 +68,115 @@
      <section class="section_une">
         <article class="blocA">
             <h2 id="hebergements">Hébergements à Marseille</h2>
+
             <div class="blocA1">
-        
                <div class="hotels_blocA">
-                   <img src="images_reservia/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="photos_blocA" alt="Auberge de la Cannebière" />
-                   <h3>Auberge de la Cannebière</h3>
-                   <p>Nuit à partir de 25<i class="fas fa-euro-sign"></i></p>
-                   <p><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></p>
-               </div>
+                   <div class="block-img">
+                        <img src="images_reservia/hebergements/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="photos_blocA" alt="Auberge de la Cannebière" />
+                    </div>
+
+                    <div class="block-text">
+                        <h3>Auberge de la Cannebière</h3>
+                        <p>Nuit à partir de 25<i class="fas fa-euro-sign"></i></p>
+                        <div><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></div>
+                    </div>
+                </div>
+
                <div class="hotels_blocA">
-                   <img src="images_reservia/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg" class="photos_blocA" alt="Hôtel du port" />
-                   <h3>Hôtel du port</h3>
-                   <p>Nuit à partir de 52<i class="fas fa-euro-sign"></i></p>
-                   <p class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
-               </div>
+                    <div class="block-img">
+                        <img src="images_reservia/hebergements/fred-kleber-gTbaxaVLvsg-unsplash.jpg" class="photos_blocA" alt="Hôtel du port" />
+                    </div>
+
+                    <div class="block-text">
+                        <h3>Hôtel du port</h3>
+                        <p>Nuit à partir de 52<i class="fas fa-euro-sign"></i></p>
+                        <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+
                <div class="hotels_blocA">
-                   <img src="images_reservia/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg" class="photos_blocA" alt="Hôtel Les Mouettes" />
-                   <h3>Hôtel Les Mouettes</h3>
-                   <p>Nuit à partir de 76<i class="fas fa-euro-sign"></i></p>
-                   <p><i class="fas fa-star etoile_bleue "></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></p>
-               </div>
+                   <div class="block-img">
+                        <img src="images_reservia/hebergements/reisetopia-B8WIgxA_PFU-unsplash.jpg" class="photos_blocA" alt="Hôtel Les Mouettes" />
+                    </div>
+
+                    <div class="block-text">
+                        <h3>Hôtel Les Mouettes</h3>
+                        <p>Nuit à partir de 76<i class="fas fa-euro-sign"></i></p>
+                        <div><i class="fas fa-star etoile_bleue "></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></div>
+                    </div>
+                </div>
+
                <div class="hotels_blocA">
-                   <img src="images_reservia/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg" class="photos_blocA" alt="Hôtel de la mer" />
-                   <h3>Hôtel de la mer</h3>
-                   <p>Nuit à partir de 46<i class="fas fa-euro-sign"></i></p>
-                   <p><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i><i class="fas fa-star etoile_grise"></i></p>
-               </div>
+                   <div class="block-img">
+                      <img src="images_reservia/hebergements/annie-spratt-Eg1qcIitAuA-unsplash.jpg" class="photos_blocA" alt="Hôtel de la mer" />
+                    </div>
+                    <div class="block-text">
+                        <h3>Hôtel de la mer</h3>
+                        <p>Nuit à partir de 46<i class="fas fa-euro-sign"></i></p>
+                        <div><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i><i class="fas fa-star etoile_grise"></i></div>
+                    </div>
+                   </div>  
+
                <div class="hotels_blocA">
-                   <img src="images_reservia/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" class="photos_blocA" alt="Auberge Le Panier" />
-                   <h3>Auberge Le Panier</h3>
-                   <p>Nuit à partir de 23<i class="fas fa-euro-sign"></i></p>
-                   <p><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></p>
-               </div>
+                   <div class="block-img">
+                     <img src="images_reservia/hebergements/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" class="photos_blocA" alt="Auberge Le Panier" />
+                    </div>
+                    <div class="block-text">
+                        <h3>Auberge Le Panier</h3>
+                        <p>Nuit à partir de 23<i class="fas fa-euro-sign"></i></p>
+                        <div><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></div>
+                    </div>
+                  </div> 
+
                <div class="hotels_blocA">
-                   <img src="images_reservia/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" class="photos_blocA" alt="Hôtel chez Amina" />
-                   <h3>Hôtel chez Amina</h3>
-                   <p>Nuit à partir de 96<i class="fas fa-euro-sign"></i></p>
-                   <p class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                   <div class="block-img">
+                     <img src="images_reservia/hebergements/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" class="photos_blocA" alt="Hôtel chez Amina" />
+                   </div>
+                   <div claass="block-text">
+                     <h3>Hôtel chez Amina</h3>
+                     <p>Nuit à partir de 96<i class="fas fa-euro-sign"></i></p>
+                     <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+             
                </div>
             </div>
-            <div><p>Afficher plus</p></div>
+
+            <div>
+                <p>Afficher plus</p>
+            </div>
         </article>
         
         <aside class="blocB">
                <h2 class="les_plus_populaires">Les plus populaires <i class="fas fa-chart-line"></i></h2> <!--création de l'aside, complémentaire à la section; à revoir pour correction-->
                <div class="blocB1">
                     <div class="hotels_blocB">
+                        <div class="block-img">
                             <img src="images_reservia/hebergements/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" class="photos_blocB" alt="Hôtel Le soleil du matin" />
+                        </div>
+                        <div class="block-text">
                             <h3>Hôtel Le soleil du matin</h3><!--insertion des images-->
                             <p>Nuit à partir de 128<i class="fas fa-euro-sign"></i></p>
-                            <p class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p><!--insertion des étoiles et création de la classe dans le paragraphe pour la couleur des étoiles en CSS-->
+                            <div class="etoile_bleue"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><!--insertion des étoiles et création de la classe dans le paragraphe pour la couleur des étoiles en CSS-->
+                        </div>
                     </div>
                     <div class="hotels_blocB">
+                        <div class="block-img">
                             <img src="images_reservia/hebergements/aw-creative-VGs8z60yT2c-unsplash.jpg" class="photos_blocB" alt="Au coeur de l'eau Chambres d'hôtes" />
+                        </div>
+                        <div class="block-text">
                             <h3>Au coeur de l'eau<br />Chambres d'hôtes</h3><!--corriger afin d'enlever les br-->
                             <p>Nuit à partir de 71<i class="fas fa-euro-sign"></i></p>
-                            <p><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></p>
-                    
+                            <div><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></div>
+                        </div>
                     </div>
                     <div class="hotels_blocB">
-                        <img src="images_reservia/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg" class="photos_blocB" alt="Hôtel Tout bleu et Blanc" />
-                        <h3>Hôtel Tout bleu et Blanc</h3>
-                        <p>Nuit à partir de 68<i class="fas fa-euro-sign"></i></p>
-                        <p><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></p>
+                        <div class="block-img">
+                           <img src="images_reservia/hebergements/febrian-zakaria-sjvU0THccQA-unsplash.jpg" class="photos_blocB" alt="Hôtel Tout bleu et Blanc" />
+                        </div>
+                        <div class="block-text"></div>
+                           <h3>Hôtel Tout bleu et Blanc</h3>
+                           <p>Nuit à partir de 68<i class="fas fa-euro-sign"></i></p>
+                           <div><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_bleue"></i><i class="fas fa-star etoile_grise"></i></div>
+                        </div>
                     </div>
                </div> 
         </aside>
@@ -125,30 +186,30 @@
      <section class="section_deux">
          <h2 id="activites">Activités à Marseille</h2>
             <div class="vieux_port">
-                <img src="images_reservia/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" />
+                <img src="images_reservia/activites/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" class="photoA" alt="Vieux Port" />
                 <h3>Vieux Port</h3>
             </div>
             <div class="fort_de_pomegues">
                 <div>
-                    <img src="images_reservia/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues" />
+                    <img src="images_reservia/activites/paul-hermann-QFTrLdQIRhI-unsplash.jpg" class="photoB" alt="Fort de Pomègues" />
                     <h3>Fort de Pomègues</h3>
                 </div>
                 <div>
-                    <img src="images_reservia/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Îles du Frioul" />
+                    <img src="images_reservia/activites/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" class="photoC" alt="Îles du Frioul" />
                     <h3>Îles du Frioul</h3>
                 </div>
             </div>
             <div class="parc_national">
-                <img src="images_reservia/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Parc National des Calanques" />
+                <img src="images_reservia/activites/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" class="photoA" alt="Parc National des Calanques" />
                 <h3>Parc National des Calanques</h3>
             </div>
             <div class="notre_dame">
                 <div>
-                    <img src="images_reservia/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Notre-Dame-de-la-Garde" />
+                    <img src="images_reservia/activites/florian-wehde-xW9e8gdotxI-unsplash.jpg" class="photoD"  alt="Notre-Dame-de-la-Garde" />
                     <h3>Notre-Dame-de-la-Garde</h3>
                 </div>
                 <div>
-                    <img src="images_reservia/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Parc Longchamp" />
+                    <img src="images_reservia/activites/lena-paulin-wH2-EJoDcV0-unsplash.jpg" class="photoD" alt="Parc Longchamp" />
                     <h3>Parc Longchamp</h3>
                 </div>
             </div>

@@ -7,6 +7,8 @@ body
 {
     display: flex; /*flexbox pour l'en-tête*/
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .menu
 {
@@ -37,29 +39,27 @@ ul
     margin: auto;
 
 }
-.photos_blocA /*je définis les tailles des photos afin de les redimensionner*/
+/*.photos_blocA  //je définis les tailles des photos afin de les redimensionner
 {
-    width: 232px;/*largeur des photos du bloc*/
-    height: 120px;/*hauteur des photos du bloc*/
-    border-top: 1px solid none;/*bordures desphotos*/
-    border-top-left-radius: 20px;/*arrondissement de la bordure haut à gauche*/
-    border-top-right-radius: 20px;/*arrondissement de la bordure haut à droite*/
-}
-.photos_blocB /*redimensionne les photos du bloc B*/
+    width: 232px; //largeur des photos du bloc
+    height: 120px; //hauteur des photos du bloc
+    border-top: 1px solid none;//bordures desphotos
+    
+}*/
+
+/*.photos_blocB redimensionne les photos du bloc
 {
     width: 130px;
     height: 130px;
-}
-.hotels_blocA
+}*/
+
+.hotels_blocB
 {
     border: 3px solid white;
     border-radius: 20px;
     display: flex;/*flexbox pour chaque hôtel*/
-    flex-direction: column;
-    /*padding-right: -300px;*/
-   /* width: 180px;/*largeur de la bordure pour chaque bloc*/
+    flex-direction: row;
 }
-
 .section_une 
 {
  display: flex;/*activation flexbox sur blocA et blocB*/
@@ -79,17 +79,46 @@ ul
     display: flex;/*flexbox pour hébergement pour hebergements et blocA1*/
     flex-direction: column;
 }
-.blocA1
+.blocA .blocA1
 {
     display: flex;/*flexbox sur hôtels_blocA*/
     flex-direction: row;
-    /*justify-content: space-evenly;*/
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.blocA1>div{
-    margin: 25px;
-    width: 25%;
+
+.blocA .blocA1 .hotels_blocA{
+    width: 31.33%;
+    background-color: white;
+    padding: 4px;
+    box-sizing: border-box;
+    /* margin-right: 2%; */
+    margin-bottom: 2%;
+    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px; /*arrondissement de la bordure haut à droite*/
+    
+
+} 
+.blocA .blocA1 .hotels_blocA:nth-of-type(3) {
+    margin-right: 0; 
 }
+
+.blocA .blocA1 .hotels_blocA .block-img{
+    width: 100%;
+    max-height: 150px; 
+    overflow: hidden;
+    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px; /*arrondissement de la bordure haut à droite*/
+}
+.blocA .blocA1 .hotels_blocA .block-img img{
+    width: 100%;
+    height: auto;
+    
+}
+.blocA .blocA1 .hotels_blocA .block-text {
+    padding-left: 5%;
+}
+
 .blocB
 {
  background-color: #F2F2F2;
@@ -98,13 +127,31 @@ ul
  width: 29%;/*le blocB occupe 29% de la page*/
  display: flex;
  flex-direction: column;/*activation flexbox pour le blocB et les plus populaires*/
- justify-content: start;
+ justify-content: start;/*à revoir*/
 }
-.blocB1
+.blocB .blocB1
 {
     display:flex;/*flexbox sur les hôtels_blocB*/
     flex-direction: column;
     flex-wrap: wrap;
+}
+.blocB .blocB1 .hotels_blocB
+{
+    width: 33.33%;
+    border-radius: 20px;
+    background-color: white;
+    padding: 4px;
+    box-sizing: border-box;
+    margin-right: 2%;
+}
+.blocB .blocB1 .hotels_blocB .block-img{
+    width: 100%;
+    max-height: 150px; 
+    overflow: hidden;
+}
+.blocB .blocB1 .hotels_blocB .block-img img{
+    width: 100%;
+    height: auto;
 }
 .blocB1>div
 {
@@ -130,10 +177,7 @@ ul
     padding: 0px;
 }*/
 
-/*.premier_paragraphe
-{
-    font-weight: bold;
-}*/
+
 /*.soleil_du_matin 
 {
     float: left;
@@ -141,6 +185,34 @@ ul
     utiliser flex
     
 }*/
+/*redimensionnement photos de la section_deux*/
+.photoA {
+    width: 300px;
+    height: 360px;
+    border-top: 1px solid none;/*bordures desphotos*/
+    border-top-left-radius: 20px;/*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;/*arrondissement de la bordure haut à droite*/
 
+}
+.photoB {
+    width: ;
+    height: ;border-top: 1px solid none;/*bordures desphotos*/
+    border-top-left-radius: 20px;/*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;/*arrondissement de la bordure haut à droite*/
+
+}
+
+.en_tete_mobile {
+
+}
+
+/* tablette */
+@media screen and (min-width: 640px) and (max-width: 900px) {
+.en_tete {
+    display: none;
+}
+}
+
+/* mobile */
 
 
