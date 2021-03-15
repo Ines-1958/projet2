@@ -47,13 +47,7 @@ ul
     margin: auto;
 
 }
-/*.photos_blocA  //je définis les tailles des photos afin de les redimensionner
-{
-    width: 232px; //largeur des photos du bloc
-    height: 120px; //hauteur des photos du bloc
-    border-top: 1px solid none;//bordures desphotos
-    
-}*/
+
 
 /*.photos_blocB redimensionne les photos du bloc
 {
@@ -107,9 +101,6 @@ ul
     /* margin-right: 2%; */
     margin-bottom: 2%;
     border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
-   
-    
-
 } 
 
 .blocA .blocA1 .hotels_blocA .block-img{
@@ -188,14 +179,7 @@ ul
 .blocB .blocB1 .hotels_blocB .block-text {
     padding-left: 10px;
 }
-/*.blocB1>div
-{
-    margin: 25px;
-    
-}*/
- /*margin: 10px 10px;
- padding-left: 20px;
-}*/
+
 .etoile_bleue /*définition de la couleur bleu pour toutes les classes etoile_bleue*/
 {
     color: #0065FC;
@@ -204,14 +188,6 @@ ul
 {
     color:silver;
 }
-/*.hotel_soleil
-{
-    border: 3px solid white;
-    border-radius: 20px;
-    text-align: justify;
-    padding: 0px;
-}*/
-
 
 
 
@@ -230,6 +206,77 @@ ul
     border-top-right-radius: 20px;arrondissement de la bordure haut à droite
 
 }*/
+
+.section_deux {
+   width: 100%;
+   border: 2px solid blue;
+/* padding: 5px;*/
+}
+.blocC {
+    display: flex; /*flexbox sur le blocC*/
+    flex-direction: column;
+    width: 100%;/*le blocA occupe 69% de la page*/    
+}
+
+.blocC .blocC2 {
+    display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
+    flex-direction: row;
+}
+
+.blocC .blocC2 .activites_blocC {
+    width: 24%;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 4px;    
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 {
+    display: flex;
+    flex-direction: column;
+    /*max-height: 400px;*/
+}
+
+.blocC .blocC2 .activites_blocC  .bloc_img1 {
+    width: 100%;
+    max-height: 400px; 
+    overflow: hidden;
+    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+.blocC .blocC2 .activites_blocC  .bloc_img1 .img1 {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .bloc_img2 {
+    
+}
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img2 {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
+    width: 100%;
+    height: 120px;
+}
+
+
+
+
+
+
+
 
 .en_tete_mobile {
 
