@@ -221,6 +221,7 @@ ul
 .blocC .blocC2 {
     display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .blocC .blocC2 .activites_blocC {
@@ -228,13 +229,19 @@ ul
     background-color: white;
     box-sizing: border-box;
     border-radius: 20px;
-    padding: 4px;    
+    padding: 4px; 
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     /*max-height: 400px;*/
+}
+
+.block {
+    box-shadow: 3px 3px 5px 3px silver;
+    border-radius: 20px;
 }
 
 .blocC .blocC2 .activites_blocC  .bloc_img1 {
@@ -272,14 +279,28 @@ ul
     height: 230px;
     object-fit: cover;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-    border-top-right-radius: 20px
+    border-top-right-radius: 20px;
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
     width: 100%;
-    height: 105px;
+    height: 108px;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-    border-top-right-radius: 20px
+    border-top-right-radius: 20px;
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img4 {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img5 {
+    width: 100%;
+    height: 188px;
+    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;
 }
 
 
@@ -290,7 +311,7 @@ ul
 
 
 .en_tete_mobile {
-
+  
 }
 
 /* tablette */
@@ -301,5 +322,3 @@ ul
 
 
 /* mobile */
-
-
