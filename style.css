@@ -18,22 +18,20 @@ body
   height: 100%;
 }
 
-.menu
+.en_tete .menu
 {
     display: flex; /*flexbox pour les nav*/
-    flex-direction: row;
-    
+    flex-direction: row;  
 }
+
+.en_tete .menu .li1:hover {
+    border-top: 2px solid #0065FC;
+}
+
 a {
     text-decoration: none;
 }
-.li1
-{
-    /*text-decoration: overline;/*surlignement de hebergement
-    color: #0065FC;*/
-    border-top: 2px solid #0065FC ;
-    
-}
+
 ul 
 {
     list-style-type: none;/*pas de style de liste à puces*/
@@ -99,35 +97,97 @@ span i::before {
     left: 9px;
 }
 
-.icones_filtres i {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border-radius: 50%;
-}
-.icones_filtres i::before {
-    position: absolute;
-    top: 8px;
-    left: 7px;
-}
-
 .filtres {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
-    
-
+    font-weight: bold;
     
 }
 
 .filtres .icones_texte {
     border: 1px solid #F2F2F2;
-    width: 200px;
-    height: 30px;
+    min-width: 145px;
+    height: 32px;
     border-radius: 50px;
 }
+
+.filtres .icones_texte1 {
+    border: 1px solid #F2F2F2;
+    min-width: 100px;
+    height: 32px;
+    border-radius: 50px;
+}
+
+.filtres .icones_texte2 {
+    border: 1px solid #F2F2F2;
+    min-width: 200px;
+    height: 32px;
+    border-radius: 50px;
+}
+
+.filtres .icones_texte .icones_filtres i {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    
+}
+
+.filtres .icones_texte1 .icones_filtres i {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    
+}
+
+.filtres .icones_texte2 .icones_filtres i {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    
+}
+
+.filtres .icones_texte .icones_filtres i::before {
+    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte*/
+    top: 7px;
+    left: 7px;
+}
+
+
+.filtres .icones_texte1 .icones_filtres i::before {
+    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte1*/
+    top: 8px;
+    left: 8px;
+}
+
+.filtres .icones_texte2 .icones_filtres i::before {
+    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte2*/
+    top: 6px;
+    left: 6px;
+}
+
+.filtres .icones_texte .texte {
+    float: right;
+    line-height: 30px;
+    padding-right: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
 
 
  
@@ -271,6 +331,7 @@ span i::before {
    border: 2px solid blue;
 /* padding: 5px;*/
 }
+
 .blocC {
     display: flex; /*flexbox sur le blocC*/
     flex-direction: column;
@@ -385,9 +446,14 @@ ul {
 
 
 
-.en_tete_mobile {
+
+
+
+
+
+/*.en_tete_mobile {
   
-}
+}*/
 
 /* tablette */
 @media screen and (min-width: 640px) and (max-width: 900px) {
