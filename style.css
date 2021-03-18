@@ -40,20 +40,97 @@ ul
 }
 #rechercher
 {
-    background-color: #0065FC;/*stylisation bouton Rechercher. A corriger*/
     font-weight: bold;
     color: white;
-    border-radius: 20px;
     margin: auto;
-
+    padding: 0;
 }
 
 
-/*.photos_blocB redimensionne les photos du bloc
-{
-    width: 130px;
-    height: 130px;
-}*/
+.zone_saisie {
+    width: 412px;
+    height: 34px;
+    overflow: hidden;
+    border: 1px solid #F2F2F2;
+    border-radius: 10px;
+}
+
+.zone_saisie i {
+    width: 34px;/*stylisation icône zone de saisie*/
+    height: 34px;
+    background-color: #F2F2F2;
+    padding: 8px 8px;
+    float: left;
+    text-align: center;
+}
+
+.zone_saisie #rechercher {
+    width: 200px;
+    height: 34px;
+    padding-bottom: 0;
+    border: none;
+    float: left;
+    padding-left: 5px;
+}
+
+.zone_saisie button {
+    width: 157px;
+    height: 34px;
+    color: white;
+    background-color:  #0065FC;
+    border: none;
+
+}
+
+.icone {
+    color:  #0065FC;/*couleur icones filtres et info*/
+}
+span i {
+    position: relative;/*création cercle autour de l'icône*/
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #F2F2F2;
+    border-radius: 50px;
+}
+span i::before {
+    position: absolute;
+    top: 4px;
+    left: 9px;
+}
+
+.icones_filtres i {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+}
+.icones_filtres i::before {
+    position: absolute;
+    top: 8px;
+    left: 7px;
+}
+
+.filtres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+
+    
+}
+
+.filtres .icones_texte {
+    border: 1px solid #F2F2F2;
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+
+ 
 
 .hotels_blocB
 {

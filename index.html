@@ -34,19 +34,30 @@
           <p>En plein centre ville ou en pleine nature</p>
           <div>
             <form>
-              <div><i class="fas fa-map-marker-alt"></i> <input type="text" placeholder="Marseille, France" name="rechercher" id="rechercher" />
-                <button type="submit">rechercher</button><!--création bouton Rechercher-->
+              <div class="zone_saisie"><i class="fas fa-map-marker-alt"></i> <input type="text" placeholder="Marseille, France" name="rechercher" id="rechercher" />
+                <button type="submit">Rechercher</button><!--création bouton Rechercher-->
               </div>
             </form>
               
           </div>
-          <div>Filtres 
-              <i class="fas fa-money-bill-wave"></i> <span>Economique</span>
-              <i class="fas fa-child"></i> <span>Familial</span> <!--insertion des différentes icônes-->
-              <i class="fas fa-heart"></i> <span>Romantique</span>
-              <i class="fas fa-dog"></i> <span>Animaux autorisés</span></div>
+          <div class="filtres">Filtres <!--insertion des différentes icônes-->
+              <div class="icones_texte">
+                  <span class="icones_filtres"><i class="fas fa-money-bill-wave icone"></i> </span><span class="texte">Economique</span>
+              </div>
+              <div class="icones_texte">
+                  <span class="icones_filtres"><i class="fas fa-child icone"></i></span> <span class="texte">Familial</span>
+              </div> 
+              <div class="icones_texte">
+                  <span class="icones_filtres"><i class="fas fa-heart icone"></i></span> <span class="texte">Romantique</span>
+              </div>
+              <div class="icones_texte">
+                  <span class="icones_filtres"><i class="fas fa-dog icone"></i></span> <span class="texte">Animaux autorisés</span>
+              </div>
+          </div>
           <div>
-            <p><i class="fas fa-info-circle"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+            <p>
+                <span><i class="fas fa-info icone"></i></span> Plus de 500 logements sont disponibles dans cette ville
+            </p>
           </div>
 
      </header>
