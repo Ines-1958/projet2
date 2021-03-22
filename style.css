@@ -1,4 +1,4 @@
-body 
+body, h3
 {
     font-family: 'Raleway', sans-serif;
     margin: 0px;
@@ -24,6 +24,10 @@ body
     flex-direction: row;  
 }
 
+.en_tete .menu li {
+    padding: 20px;
+}
+
 .en_tete .menu .li1:hover {
     border-top: 2px solid #0065FC;
 }
@@ -35,7 +39,9 @@ a {
 ul 
 {
     list-style-type: none;/*pas de style de liste à puces*/
+    padding: 0;
 }
+
 #rechercher
 {
     font-weight: bold;
@@ -100,32 +106,19 @@ span i::before {
 .filtres {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: bold;
+    line-height: 40px;;
     
 }
 
 .filtres .icones_texte {
     border: 1px solid #F2F2F2;
-    min-width: 145px;
     height: 32px;
     border-radius: 50px;
+    margin: 5px;
 }
 
-.filtres .icones_texte1 {
-    border: 1px solid #F2F2F2;
-    min-width: 100px;
-    height: 32px;
-    border-radius: 50px;
-}
-
-.filtres .icones_texte2 {
-    border: 1px solid #F2F2F2;
-    min-width: 200px;
-    height: 32px;
-    border-radius: 50px;
-}
 
 .filtres .icones_texte .icones_filtres i {
     position: relative;
@@ -186,19 +179,6 @@ span i::before {
 
 
 
-
-
-
-
- 
-
-.hotels_blocB
-{
-    border: 3px solid white;
-    border-radius: 20px;
-    display: flex;/*flexbox pour chaque hôtel*/
-    flex-direction: row;
-}
 .section_une 
 {
  display: flex;/*activation flexbox sur blocA et blocB*/
@@ -238,6 +218,7 @@ span i::before {
     /* margin-right: 2%; */
     margin-bottom: 2%;
     border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
+    box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
 } 
 
 .blocA .blocA1 .hotels_blocA .block-img{
@@ -255,6 +236,12 @@ span i::before {
 }
 .blocA .blocA1 .hotels_blocA .block-text {
     padding-left: 5px;
+    /*padding-bottom: 5px;*/
+}
+
+.blocA .blocA1 .hotels_blocA .block-text p{
+    margin-top: 5px;
+    margin-bottom: 5px;/*suppression des marges automatiques autour de p, au profit des marges top et bottom*/
 }
 
 .blocB
@@ -267,11 +254,13 @@ span i::before {
  flex-direction: column;/*activation flexbox pour le blocB et les plus populaires*/
  justify-content: start;/*à revoir*/
 }
+
 .blocB .blocB_un {/*flexbox sur le h2 et l'icône*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 .blocB .blocB1
@@ -293,6 +282,7 @@ span i::before {
     margin: 20px;
     display: flex;/*flexbox pour chaque hôtel*/
     flex-direction: row;
+    box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc B*/
 }
 
 .blocB .blocB1 .hotels_blocB .block-img{
@@ -304,17 +294,19 @@ span i::before {
 }
 
 .blocB .blocB1 .hotels_blocB .block-img img{
-    width: 150px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.blocB .blocB1 .hotels_blocB .block-img .imgB {/*rédimensionnement image Au coeur de l'eau Chambre d'hôtes*/
-    width: 220px;
-    height:100%;
-}
+
 
 .blocB .blocB1 .hotels_blocB .block-text {
     padding-left: 10px;
+}
+
+.blocB .blocB1 .hotels_blocB .block-text p {/*marges autour des paragraphes*/
+    margin-top: 5px;
+    margin-bottom: 60px;
 }
 
 .etoile_bleue /*définition de la couleur bleu pour toutes les classes etoile_bleue*/
@@ -345,7 +337,7 @@ span i::before {
 }
 
 .blocC .blocC2 .activites_blocC {
-    width: 24%;
+    width: 25%;
     background-color: white;
     box-sizing: border-box;
     border-radius: 20px;
@@ -356,6 +348,7 @@ span i::before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
     /*max-height: 400px;*/
 }
 
@@ -436,9 +429,7 @@ span i::before {
     background-color: #F2F2F2;
 }
 
-ul {
-    padding: 0;
-}
+
 
 
 
