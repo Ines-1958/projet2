@@ -121,7 +121,7 @@ span i::before {
 
 
 .filtres .icones_texte .icones_filtres i {
-    position: relative;
+   /* position: relative;*/
     width: 30px;
     height: 30px;
     background-color: #DEEBFF;
@@ -129,42 +129,19 @@ span i::before {
     
 }
 
-.filtres .icones_texte1 .icones_filtres i {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border-radius: 50%;
-    
-}
 
-.filtres .icones_texte2 .icones_filtres i {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: #DEEBFF;
-    border-radius: 50%;
-    
-}
 
 .filtres .icones_texte .icones_filtres i::before {
-    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte*/
+    /*position: absolute;/*positionnement de l'icone au centre du bloc icones_texte
     top: 7px;
-    left: 7px;
+    left: 7px;*/
+    line-height: 25px;
+    text-align: center;
+    float: left;
 }
 
 
-.filtres .icones_texte1 .icones_filtres i::before {
-    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte1*/
-    top: 8px;
-    left: 8px;
-}
 
-.filtres .icones_texte2 .icones_filtres i::before {
-    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte2*/
-    top: 6px;
-    left: 6px;
-}
 
 .filtres .icones_texte .texte {
     float: right;
@@ -272,7 +249,7 @@ span i::before {
 
 .blocB .blocB1 .hotels_blocB
 {
-    height: 25%;
+    /*height: 25%;*/
     border: 1px solid white;
     border-radius: 20px;
     background-color: white;
@@ -285,6 +262,7 @@ span i::before {
     box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc B*/
 }
 
+
 .blocB .blocB1 .hotels_blocB .block-img{
     max-width: 150px;
     height: 100%; 
@@ -295,7 +273,13 @@ span i::before {
 
 .blocB .blocB1 .hotels_blocB .block-img img{
     width: 100%;
-    height: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.blocB .blocB1 .hotels_blocB .block-img .photos_blocB1 {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -325,6 +309,15 @@ span i::before {
 }
 
 .blocC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*max-height: 400px;*/
+}
+
+
+
+.blocC {
     display: flex; /*flexbox sur le blocC*/
     flex-direction: column;
     width: 100%;/*le blocA occupe 69% de la page*/    
@@ -337,20 +330,19 @@ span i::before {
 }
 
 .blocC .blocC2 .activites_blocC {
-    width: 25%;
+    width: 24%;
     background-color: white;
     box-sizing: border-box;
     border-radius: 20px;
     padding: 4px; 
 }
 
-.blocC .blocC2 .activites_blocC .activites_blocC1 {
+/*.blocC .blocC2 .activites_blocC .activites_blocC1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    /*max-height: 400px;*/
-}
+    /*max-height: 400px;
+}*/
 
 
 
@@ -421,6 +413,13 @@ span i::before {
 .blocC .blocC2 .activites_blocC .block .textC {
     padding-left: 10px;
 }
+
+
+
+
+
+
+
 
 .bas_de_page {
     display: flex;
