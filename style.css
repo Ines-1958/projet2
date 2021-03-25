@@ -26,9 +26,10 @@ body, h3
 
 .en_tete .menu li {
     padding: 20px;
+    border-top: 2px solid white;
 }
 
-.en_tete .menu .li1:hover {
+.en_tete .menu li:hover {
     border-top: 2px solid #0065FC;
 }
 
@@ -89,7 +90,7 @@ ul
 .icone {
     color:  #0065FC;/*couleur icones filtres et info*/
 }
-span i {
+.info span i {
     position: relative;/*création cercle autour de l'icône*/
     background-color: white;
     width: 25px;
@@ -97,7 +98,7 @@ span i {
     border: 1px solid #F2F2F2;
     border-radius: 50px;
 }
-span i::before {
+.info span i::before {
     position: absolute;
     top: 4px;
     left: 9px;
@@ -108,37 +109,50 @@ span i::before {
     flex-direction: row;
     margin-top: 10px;
     font-weight: bold;
-    line-height: 40px;;
+    line-height: 40px;
+    
     
 }
 
 .filtres .icones_texte {
-    border: 1px solid #F2F2F2;
+    border: 2px solid #F2F2F2;
     height: 32px;
     border-radius: 50px;
     margin: 5px;
 }
 
+.filtres .icones_texte:hover { /*changement d'apparence au survol*/
+  background-color: green;
+  color: yellow;
+}
+
+
 
 .filtres .icones_texte .icones_filtres i {
    /* position: relative;*/
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background-color: #DEEBFF;
     border-radius: 50%;
-    
+    line-height: 35px;
+    text-align: center;
 }
 
+.filtres .icones_texte .icones_filtres i:hover { /*changement d'apparence au survol*/
+    color: white;
+ }
+ 
 
 
-.filtres .icones_texte .icones_filtres i::before {
-    /*position: absolute;/*positionnement de l'icone au centre du bloc icones_texte
+
+/*.filtres .icones_texte .icones_filtres i::before {
+    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte
     top: 7px;
-    left: 7px;*/
+    left: 7px;
     line-height: 25px;
     text-align: center;
     float: left;
-}
+}*/
 
 
 
@@ -149,11 +163,6 @@ span i::before {
     padding-right: 10px;
     
 }
-
-
-
-
-
 
 
 .section_une 
@@ -250,6 +259,7 @@ span i::before {
 .blocB .blocB1 .hotels_blocB
 {
     /*height: 25%;*/
+    height: 165px;
     border: 1px solid white;
     border-radius: 20px;
     background-color: white;
@@ -273,15 +283,11 @@ span i::before {
 
 .blocB .blocB1 .hotels_blocB .block-img img{
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
-.blocB .blocB1 .hotels_blocB .block-img .photos_blocB1 {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
+
 
 
 .blocB .blocB1 .hotels_blocB .block-text {
@@ -308,20 +314,15 @@ span i::before {
 /* padding: 5px;*/
 }
 
-.blocC {
-    display: flex;
+/*.blocC {
+    display: flex; /*flexbox sur le blocC
     flex-direction: column;
     justify-content: space-between;
-    /*max-height: 400px;*/
-}
+    width: 100%;
+    /*max-height: 400px;
+}*/
 
 
-
-.blocC {
-    display: flex; /*flexbox sur le blocC*/
-    flex-direction: column;
-    width: 100%;/*le blocA occupe 69% de la page*/    
-}
 
 .blocC .blocC2 {
     display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
@@ -330,13 +331,12 @@ span i::before {
 }
 
 .blocC .blocC2 .activites_blocC {
-    width: 24%;
+    width: 25%;
     background-color: white;
     box-sizing: border-box;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     padding: 4px; 
 }
-
 /*.blocC .blocC2 .activites_blocC .activites_blocC1 {
     display: flex;
     flex-direction: column;
@@ -345,14 +345,13 @@ span i::before {
 }*/
 
 
-
 .blocC .blocC2 .activites_blocC  .block .bloc_img1 {
     width: 100%;
-    max-height: 400px; 
+    max-height: 390px; 
     overflow: hidden;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-    border-top-right-radius: 20px;
-    overflow: hidden;
+    border-top-right-radius: 20px;  
+    margin-bottom: 10px;
 }
 
 .blocC .blocC2 .activites_blocC  .block .bloc_img1 .img1 {
@@ -368,42 +367,62 @@ span i::before {
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img2 {
     width: 100%;
-    max-height: 250px;
+    height: 200px;
+    margin-bottom: 10px;/*marge extérieure inférieure*/
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img3 {
     width: 100%;
-    max-height: 150px;
-    
+    height: 140px;  
+    margin-top: 20px;
+    padding-bottom: 10px;/*marge intérieure inférieure pour espacer les élements*/
 }
+
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img2 {
     width: 100%;
-    height: 230px;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+    border-top-right-radius: 20px;
+    
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
     border-top-right-radius: 20px;
 }
 
-.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img4 {
     width: 100%;
-    height: 108px;
-    border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-    border-top-right-radius: 20px;
+    height: 140px;
+    margin-bottom: 10px;/*marge extérieure inférieure*/
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img4 {
     width: 100%;
-    height: 150px;
+    height: 100%;
+    object-fit: cover;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
     border-top-right-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img5 {
+    width: 100%;
+    height: 170px;
+    padding-bottom: 10px;/*marge extérieure inférieure*/
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img5 {
     width: 100%;
-    height: 188px;
+    height: 100%;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
     border-top-right-radius: 20px;
 }
+
 
 .blocC .blocC2 .activites_blocC .block {
     box-shadow: 2px 2px 2px 1px silver;
@@ -413,6 +432,7 @@ span i::before {
 .blocC .blocC2 .activites_blocC .block .textC {
     padding-left: 10px;
 }
+
 
 
 
