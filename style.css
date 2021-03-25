@@ -13,7 +13,7 @@ body, h3
 .en_tete .logo {
     max-width: 100px;/*définition largeur principale*/
 }
-.en_tete .logo1 {/*redimensionnement logo*/
+.en_tete .logo1 { /*redimensionnement logo*/
   width: 120px;
   height: 100%;
 }
@@ -109,16 +109,17 @@ ul
     flex-direction: row;
     margin-top: 10px;
     font-weight: bold;
-    line-height: 40px;
+    line-height: 60px;
     
     
 }
 
 .filtres .icones_texte {
     border: 2px solid #F2F2F2;
-    height: 32px;
+    height: 34px;
     border-radius: 50px;
-    margin: 5px;
+    margin: 10px;
+    border-left: none;
 }
 
 .filtres .icones_texte:hover { /*changement d'apparence au survol*/
@@ -136,6 +137,7 @@ ul
     border-radius: 50%;
     line-height: 35px;
     text-align: center;
+    float: left;
 }
 
 .filtres .icones_texte .icones_filtres i:hover { /*changement d'apparence au survol*/
@@ -159,8 +161,9 @@ ul
 
 .filtres .icones_texte .texte {
     float: right;
-    line-height: 30px;
+    line-height: 35px;
     padding-right: 10px;
+    margin-left: 10px;
     
 }
 
@@ -331,7 +334,7 @@ ul
 }
 
 .blocC .blocC2 .activites_blocC {
-    width: 25%;
+    width: 24%;
     background-color: white;
     box-sizing: border-box;
     /*border-radius: 20px;*/
@@ -373,7 +376,7 @@ ul
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img3 {
     width: 100%;
-    height: 140px;  
+    height: 129px;  /*padding-bottom de 11px(140-11px pour avoir le même niveau que les autres blocs)*/
     margin-top: 20px;
     padding-bottom: 10px;/*marge intérieure inférieure pour espacer les élements*/
 }
@@ -397,7 +400,7 @@ ul
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img4 {
     width: 100%;
-    height: 140px;
+    height: 150px;
     margin-bottom: 10px;/*marge extérieure inférieure*/
 }
 
@@ -412,13 +415,15 @@ ul
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img5 {
     width: 100%;
-    height: 170px;
+    height: 179px; /*padding-bottom de 11px(190-11px pour avoir le même niveau que les autres blocs)*/
+    margin-top: 20px;
     padding-bottom: 10px;/*marge extérieure inférieure*/
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img5 {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
     border-top-right-radius: 20px;
 }
@@ -431,6 +436,7 @@ ul
 
 .blocC .blocC2 .activites_blocC .block .textC {
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 
