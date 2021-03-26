@@ -1,8 +1,23 @@
-body, h3
-{
+body, h3 {
     font-family: 'Raleway', sans-serif;
     margin: 0px;
+    overflow-x: hidden;
 }
+
+ul {
+    list-style-type: none;/*pas de style de liste à puces*/
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*a:visited {
+    color: blue;
+}*/
+
 .en_tete
 {
     display: flex; /*flexbox pour l'en-tête*/
@@ -22,26 +37,35 @@ body, h3
 {
     display: flex; /*flexbox pour les nav*/
     flex-direction: row;  
+    margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
+    
 }
+
+.en_tete .menu a:hover {
+    color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
+}
+
 
 .en_tete .menu li {
     padding: 20px;
     border-top: 2px solid white;
+    font-weight: bold;
+    
 }
 
 .en_tete .menu li:hover {
-    border-top: 2px solid #0065FC;
+    border-top: 2px solid #0065FC;  
 }
 
-a {
-    text-decoration: none;
-}
+/*.en_tete .menu a:visited {
+    color: #0065FC;
+}*/
 
-ul 
-{
-    list-style-type: none;/*pas de style de liste à puces*/
-    padding: 0;
-}
+
+
+
+
+
 
 #rechercher
 {
@@ -91,17 +115,14 @@ ul
     color:  #0065FC;/*couleur icones filtres et info*/
 }
 .info span i {
-    position: relative;/*création cercle autour de l'icône*/
-    background-color: white;
-    width: 25px;
-    height: 25px;
+    
+    width: 20px;
+    height: 20px;
     border: 1px solid #F2F2F2;
-    border-radius: 50px;
-}
-.info span i::before {
-    position: absolute;
-    top: 4px;
-    left: 9px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 5px;
 }
 
 .filtres {
@@ -109,9 +130,7 @@ ul
     flex-direction: row;
     margin-top: 10px;
     font-weight: bold;
-    line-height: 60px;
-    
-    
+    line-height: 60px;   
 }
 
 .filtres .icones_texte {
@@ -123,8 +142,8 @@ ul
 }
 
 .filtres .icones_texte:hover { /*changement d'apparence au survol*/
-  background-color: green;
-  color: yellow;
+  background-color: #F2F2F2;
+  color: blue;
 }
 
 
@@ -145,8 +164,6 @@ ul
  }
  
 
-
-
 /*.filtres .icones_texte .icones_filtres i::before {
     position: absolute;/*positionnement de l'icone au centre du bloc icones_texte
     top: 7px;
@@ -155,8 +172,6 @@ ul
     text-align: center;
     float: left;
 }*/
-
-
 
 
 .filtres .icones_texte .texte {
@@ -174,8 +189,6 @@ ul
  flex-direction: row;
  justify-content: space-between;
  width: 100%;
- border: 2px solid red;
-/* padding: 5px;*/
 }
 
 .section_une #hebergements, .afficher {
@@ -247,7 +260,9 @@ ul
 .blocB .blocB_un {/*flexbox sur le h2 et l'icône*/
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
   align-items: center;
   
 }
@@ -290,9 +305,6 @@ ul
     object-fit: cover;
 }
 
-
-
-
 .blocB .blocB1 .hotels_blocB .block-text {
     padding-left: 10px;
 }
@@ -313,8 +325,6 @@ ul
 
 .section_deux {
    width: 100%;
-   border: 2px solid blue;
-/* padding: 5px;*/
 }
 
 /*.blocC {
@@ -440,23 +450,31 @@ ul
 }
 
 
-
-
-
-
-
-
-
 .bas_de_page {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #F2F2F2;
+    width: 100%;
+    padding: 30px;
+    margin-top: 40px;
 }
 
+.bas_de_page .bloc_footer {
+    width: 33.33%;
+    padding: 10px;
+   
+}
 
+.bas_de_page .bloc_footer li {
+    margin-bottom: 10px;
+}
 
-
+.container {
+    width: 1290px;
+    margin: 0 auto;
+    padding: 0;
+}
 
 
 
