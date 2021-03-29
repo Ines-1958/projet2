@@ -48,23 +48,25 @@ a {
 
 .en_tete .menu li {
     padding: 20px;
-    border-top: 2px solid white;
-    font-weight: bold;
-    
+    border-top: 2px solid white;  
 }
 
 .en_tete .menu li:hover {
     border-top: 2px solid #0065FC;  
 }
 
+.en_tete .menu .active {
+    color: #0065FC;
+}
+
+.en_tete .menu .inscription {
+    color: #0065FC;
+    font-weight: bold;
+}
+
 /*.en_tete .menu a:visited {
     color: #0065FC;
 }*/
-
-
-
-
-
 
 
 #rechercher
@@ -74,7 +76,6 @@ a {
     margin: auto;
     padding: 0;
 }
-
 
 .zone_saisie {
     width: 412px;
@@ -108,7 +109,6 @@ a {
     color: white;
     background-color:  #0065FC;
     border: none;
-
 }
 
 .icone {
@@ -146,10 +146,7 @@ a {
   color: blue;
 }
 
-
-
 .filtres .icones_texte .icones_filtres i {
-   /* position: relative;*/
     width: 35px;
     height: 35px;
     background-color: #DEEBFF;
@@ -163,40 +160,32 @@ a {
     color: white;
  }
  
-
-/*.filtres .icones_texte .icones_filtres i::before {
-    position: absolute;/*positionnement de l'icone au centre du bloc icones_texte
-    top: 7px;
-    left: 7px;
-    line-height: 25px;
-    text-align: center;
-    float: left;
-}*/
-
-
 .filtres .icones_texte .texte {
     float: right;
     line-height: 35px;
     padding-right: 10px;
-    margin-left: 10px;
-    
+    margin-left: 10px;  
 }
 
 
-.section_une 
-{
+.section_une {
  display: flex;/*activation flexbox sur blocA et blocB*/
  flex-direction: row;
  justify-content: space-between;
  width: 100%;
 }
+.section_une .etoiles .etoile_bleue {
+   color: #0065FC;
+}
 
+.section_une .etoiles .etoile_grise {
+    color:silver;
+}
 .section_une #hebergements, .afficher {
     padding-left: 20px;
 }
 
-.blocA
-{
+.blocA {
     background-color: #F2F2F2;
     border: 1px solid none;
     border-radius: 20px;
@@ -204,50 +193,54 @@ a {
     display: flex;/*flexbox pour hébergement pour hebergements et blocA1*/
     flex-direction: column;
 }
-.blocA .blocA1
-{
+.blocA .blocA1 {
     display: flex;/*flexbox sur hôtels_blocA*/
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.blocA .blocA1 .hotels_blocA{
+.blocA .blocA1 .hotels_blocA {
     width: 31.33%;
     background-color: white;
     padding: 4px;
     box-sizing: border-box;
-    /* margin-right: 2%; */
     margin-bottom: 2%;
     border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
     box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
 } 
 
-.blocA .blocA1 .hotels_blocA .block-img{
+.blocA .blocA1 .hotels_blocA .block-img {
     width: 100%;
     max-height: 150px; 
     overflow: hidden;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
     border-top-right-radius: 20px; /*arrondissement de la bordure haut à droite*/
 }
-.blocA .blocA1 .hotels_blocA .block-img img{
+
+.blocA .blocA1 .hotels_blocA .block-img img {
     width: 100%;
     height: 140px;
-    object-fit: cover;
-    
+    object-fit: cover;    
 }
+
 .blocA .blocA1 .hotels_blocA .block-text {
-    padding-left: 5px;
-    /*padding-bottom: 5px;*/
+    padding: 4px 6px;
+    position: relative;
 }
 
-.blocA .blocA1 .hotels_blocA .block-text p{
+.blocA .blocA1 .hotels_blocA .block-text .etoiles {
+    position: absolute;
+    bottom: 0;
+}
+
+.blocA .blocA1 .hotels_blocA .block-text p {
     margin-top: 5px;
-    margin-bottom: 5px;/*suppression des marges automatiques autour de p, au profit des marges top et bottom*/
+    
+    /*margin-bottom: 5px;/*suppression des marges automatiques autour de p, au profit des marges top et bottom*/
 }
 
-.blocB
-{
+.blocB {
  background-color: #F2F2F2;
  border: 1px solid none;
  border-radius: 20px; /*arrondissement de la bordure*/
@@ -263,27 +256,22 @@ a {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
-  align-items: center;
-  
+  align-items: center; 
 }
 
-.blocB .blocB1
-{
+.blocB .blocB1 {
     display:flex;/*flexbox sur les hôtels_blocB*/
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-.blocB .blocB1 .hotels_blocB
-{
-    /*height: 25%;*/
+.blocB .blocB1 .hotels_blocB {
     height: 165px;
     border: 1px solid white;
     border-radius: 20px;
     background-color: white;
     padding: 4px;
     box-sizing: border-box;
-    /*margin-right: 2%;*/
     margin: 20px;
     display: flex;/*flexbox pour chaque hôtel*/
     flex-direction: row;
@@ -291,7 +279,7 @@ a {
 }
 
 
-.blocB .blocB1 .hotels_blocB .block-img{
+.blocB .blocB1 .hotels_blocB .block-img {
     max-width: 150px;
     height: 100%; 
     overflow: hidden;
@@ -306,36 +294,24 @@ a {
 }
 
 .blocB .blocB1 .hotels_blocB .block-text {
+    position: relative;
     padding-left: 10px;
 }
 
 .blocB .blocB1 .hotels_blocB .block-text p {/*marges autour des paragraphes*/
-    margin-top: 5px;
-    margin-bottom: 60px;
+   margin-top: 5px; 
 }
 
-.etoile_bleue /*définition de la couleur bleu pour toutes les classes etoile_bleue*/
-{
-    color: #0065FC;
+.blocB .blocB1 .hotels_blocB .block-text .etoiles {/*définition de la couleur bleu pour toutes les classes etoile_bleue*/
+    position: absolute;
+    bottom: 0;
 }
-.etoile_grise
-{
-    color:silver;
-}
+
+
 
 .section_deux {
    width: 100%;
 }
-
-/*.blocC {
-    display: flex; /*flexbox sur le blocC
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    /*max-height: 400px;
-}*/
-
-
 
 .blocC .blocC2 {
     display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
@@ -347,16 +323,8 @@ a {
     width: 24%;
     background-color: white;
     box-sizing: border-box;
-    /*border-radius: 20px;*/
     padding: 4px; 
 }
-/*.blocC .blocC2 .activites_blocC .activites_blocC1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /*max-height: 400px;
-}*/
-
 
 .blocC .blocC2 .activites_blocC  .block .bloc_img1 {
     width: 100%;
@@ -396,8 +364,7 @@ a {
     height: 100%;
     object-fit: cover;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-    border-top-right-radius: 20px;
-    
+    border-top-right-radius: 20px;   
 }
 
 .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
@@ -450,7 +417,7 @@ a {
 }
 
 
-.bas_de_page {
+.bas_de_page .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -460,21 +427,32 @@ a {
     margin-top: 40px;
 }
 
-.bas_de_page .bloc_footer {
+.bas_de_page .footer .bloc_footer {
     width: 33.33%;
     padding: 10px;
-   
 }
 
-.bas_de_page .bloc_footer li {
+.bas_de_page .footer .bloc_footer li {
     margin-bottom: 10px;
 }
 
-.container {
-    width: 1290px;
+body .container {
     margin: 0 auto;
-    padding: 0;
+    padding: 0 50px;
 }
+
+/*.bas_de_page .footer {
+    padding: 0 50px;
+}*/
+
+/*.blocA .blocA1 .hotels_blocA .block-text p{
+    position: relative;
+}
+
+.blocA .blocA1 .hotels_blocA .block-text .etoiles {
+    position: absolute;
+    bottom: O;
+}*/
 
 
 
