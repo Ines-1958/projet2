@@ -450,7 +450,7 @@ body a {
 
 
 /* mobile */
-@media all and (max-device-width: 480px) {
+@media all and (max-width: 768px) {
 
     body {
         margin: 0;
@@ -506,6 +506,99 @@ body a {
         font-weight: bold;
         line-height: 60px; 
         flex-wrap: wrap;  
+    }
+
+    .blocC .blocC2 .activites_blocC {
+        width: 100%;
+        background-color: white;
+        box-sizing: border-box;
+        padding: 4px; 
+    }
+
+    .blocC .blocC2 {
+        display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .blocC .blocC2 .activites_blocC  .block .bloc_img1 {
+        width: auto;
+        height: 150px; 
+       /* max-height: inherit;*/
+        overflow: hidden;
+        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+        border-top-right-radius: 20px;  
+        margin-bottom: 10px;
+    }
+
+    .blocC .blocC2 .activites_blocC  .block .bloc_img1 .img1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img2 {
+        width: auto;
+        height: 150px;
+        margin-bottom: 10px;/*marge extérieure inférieure*/
+    }
+    
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img3 {
+        width: auto;
+        height: 150px;  /*padding-bottom de 11px(140-11px pour avoir le même niveau que les autres blocs)*/
+        margin-top: 10px;
+        padding-bottom: 10px;/*marge intérieure inférieure pour espacer les élements*/
+    }
+
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img4 {
+        width: auto;
+        height: 150px;
+        margin-bottom: 10px;/*marge extérieure inférieure*/
+    }
+
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img5 {
+        width: auto;
+        height: 150px; /*padding-bottom de 11px(190-11px pour avoir le même niveau que les autres blocs)*/
+        margin-top: 20px;
+        padding-bottom: 10px;/*marge extérieure inférieure*/
+    }
+
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+        border-top-right-radius: 20px;   
+    }
+    
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+        border-top-right-radius: 20px;
+    }
+
+    
+
+
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img4 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+        border-top-right-radius: 20px;
+        margin-bottom: 10px;
+    }
+    
+    
+    
+    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img5 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
+        border-top-right-radius: 20px;
     }
 
      .bas_de_page {
@@ -572,6 +665,13 @@ body a {
         border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
         box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
     } 
+
+
+   
+
+    
+
+
 
     .bas_de_page {
 
