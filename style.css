@@ -4,19 +4,20 @@ body, h3 {
     overflow-x: hidden;
 }
 
-ul {
+body .container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body ul {
     list-style-type: none;/*pas de style de liste à puces*/
     padding: 0;
 }
 
-a {
+body a {
     text-decoration: none;
     color: black;
 }
-
-/*a:visited {
-    color: blue;
-}*/
 
 .en_tete
 {
@@ -417,7 +418,7 @@ a {
 }
 
 
-.bas_de_page .footer {
+.bas_de_page {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -427,51 +428,155 @@ a {
     margin-top: 40px;
 }
 
-.bas_de_page .footer .bloc_footer {
+.bas_de_page .bloc_footer {
     width: 33.33%;
     padding: 10px;
 }
 
-.bas_de_page .footer .bloc_footer li {
+.bas_de_page .bloc_footer li {
     margin-bottom: 10px;
 }
 
-body .container {
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-/*.bas_de_page .footer {
-    padding: 0 50px;
-}*/
-
-/*.blocA .blocA1 .hotels_blocA .block-text p{
-    position: relative;
-}
-
-.blocA .blocA1 .hotels_blocA .block-text .etoiles {
-    position: absolute;
-    bottom: O;
-}*/
 
 
 
-
-
-
-
-
-
-
-/*.en_tete_mobile {
-  
-}*/
+/*.en_tete_mobile {}*/
 
 /* tablette */
-@media screen and (min-width: 640px) and (max-width: 900px) {
+/*@media screen and (min-width: 640px) and (max-width: 900px) {
 .en_tete {
     display: none;
-}
+}*/
 
 
 /* mobile */
+@media all and (max-device-width: 480px) {
+
+    body {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .section_une {
+        
+        flex-direction: column-reverse;
+        width: auto; 
+       }
+
+    .section_une #hebergements, .afficher {
+        padding-left: 5px;
+    }
+       
+       .blocB {
+        background-color: #F2F2F2;
+        width: auto;
+        display: flex;
+        flex-direction: column;/*activation flexbox pour le blocB et les plus populaires*/
+        
+       }
+       
+
+
+       .blocA {
+        background-color: white;
+        border: 1px solid none;
+        border-radius: 20px;
+        width: auto;
+        display: flex;/*flexbox pour hébergement pour hebergements et blocA1*/
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .blocA .blocA1 .hotels_blocA {
+        width: 100%;
+        background-color: white;
+        padding: 4px;
+        box-sizing: border-box;
+        margin-bottom: 2%;
+        border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
+        box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
+    } 
+
+
+    .filtres {
+        flex: 1;
+        min-width: 45%;
+        flex-direction: row;
+        margin-top: 10px;
+        font-weight: bold;
+        line-height: 60px; 
+        flex-wrap: wrap;  
+    }
+
+     .bas_de_page {
+
+         margin-top: 50px;
+         flex-direction: column;
+         width: 100%;
+     }
+
+    
+
+}
+
+@media all and (max-width: 1024px)
+{
+    body {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .section_une {
+        
+        flex-direction: column-reverse;
+        width: auto;
+       }
+
+       .blocB {
+        background-color: #F2F2F2;
+        width: auto;
+        flex-direction: column;/*activation flexbox pour le blocB et les plus populaires
+        justify-content: start;/*à revoir*/
+
+       }
+
+       .blocB .blocB1 .hotels_blocB {
+        height: 165px;
+        width: auto;
+        border: 1px solid white;
+        border-radius: 20px;
+        background-color: white;
+        padding: 4px;
+        box-sizing: border-box;
+        margin: 20px;
+        display: flex;/*flexbox pour chaque hôtel*/
+        flex-direction: row;
+        box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc B*/
+    }
+
+      
+        .blocA {
+        background-color: white;
+        border: 1px solid none;
+        border-radius: 20px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px; 
+    }
+
+    .blocA .blocA1 .hotels_blocA {
+        width: 100%;
+        padding: 4px;
+        box-sizing: border-box;
+        margin-bottom: 2%;
+        border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
+        box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
+    } 
+
+    .bas_de_page {
+
+        margin-top: 50px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
