@@ -28,6 +28,28 @@
                                 <li><a href="#" class="inscription">S'inscrire</a></li><!--à corriger-->
                             </ul>
                         </div>
+                        
+                    </nav>
+                </div>
+
+                <div class="en_tete_mobile">
+                    <div class="sous-en-tete">
+                        <div class="logo">
+                            <img src="images_reservia/logo/Reservia@3x.png" class="logo1" alt="logo reservia"/><!--insertion logo reservia-->
+                        </div>
+                        <div>
+                            <a href="#" class="inscription">S'inscrire</a><!--à corriger-->
+                        </div>
+                    </div>
+
+                    <nav >
+                        <div>
+                            <ul class="menu">
+                                <li><a href="#hebergements" class="active">Hébergements</a></li><!--ne fonctionne pas sur le li, problème de puissance?vu l'id-->
+                                <li><a href="#activites">Activités</a></li>   
+                            </ul>
+                        </div>
+                        
                     </nav>
                 </div>
                 
@@ -36,12 +58,16 @@
                 <div>
                     <form>
                     <div class="zone_saisie"><i class="fas fa-map-marker-alt"></i> <input type="text" placeholder="Marseille, France" name="rechercher" id="rechercher" />
-                        <button type="submit">Rechercher</button><!--création bouton Rechercher-->
+                        <button type="submit">
+                            <span class="bouton_pc">Rechercher</span>
+                            <span class="bouton_mobile"><i class="fas fa-search"></i></span>
+                        </button><!--création bouton Rechercher-->
                     </div>
                     </form>
                     
                 </div>
-                <div class="filtres">Filtres <!--insertion des différentes icônes-->
+                <div class="filtres">
+                    <span class="filtres-titre">Filtres</span> <!--insertion des différentes icônes-->
                     <div class="icones_texte">
                         <span class="icones_filtres"><i class="fas fa-money-bill-wave icone"></i> </span><span class="texte">Economique</span>
                     </div>

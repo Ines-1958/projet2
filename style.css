@@ -34,25 +34,30 @@ body a {
   height: 100%;
 }
 
-.en_tete .menu
-{
+.en_tete .menu {
+
     display: flex; /*flexbox pour les nav*/
     flex-direction: row;  
     margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
     
 }
 
-.en_tete .menu a:hover {
+.en_tete .menu li:hover a {
     color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
 }
 
 
 .en_tete .menu li {
-    padding: 20px;
+    
     border-top: 2px solid white;  
 }
 
-.en_tete .menu li:hover {
+.en_tete .menu a {
+    display: block;/*padding sur les a du menu(bloc ul)*/
+    padding: 20px;
+}
+
+.en_tete .menu li:hover{
     border-top: 2px solid #0065FC;  
 }
 
@@ -65,9 +70,9 @@ body a {
     font-weight: bold;
 }
 
-/*.en_tete .menu a:visited {
-    color: #0065FC;
-}*/
+.en_tete_mobile {
+    display: none;
+}
 
 
 #rechercher
@@ -86,7 +91,7 @@ body a {
     border-radius: 10px;
 }
 
-.zone_saisie i {
+.zone_saisie .fa-map-marker-alt {
     width: 34px;/*stylisation icône zone de saisie*/
     height: 34px;
     background-color: #F2F2F2;
@@ -107,9 +112,18 @@ body a {
 .zone_saisie button {
     width: 157px;
     height: 34px;
-    color: white;
     background-color:  #0065FC;
     border: none;
+    cursor: url("https://www.kindpng.com/picc/m/108-1083783_cursor-svg-pointer-hand-pointer-cursor-hd-png.png"), pointer;
+}
+
+
+.zone_saisie button span{
+    color: white;
+}
+
+.zone_saisie button .bouton_mobile {
+    display: none;
 }
 
 .icone {
@@ -140,6 +154,7 @@ body a {
     border-radius: 50px;
     margin: 10px;
     border-left: none;
+    cursor: url("images/cursor.png"), pointer;
 }
 
 .filtres .icones_texte:hover { /*changement d'apparence au survol*/
@@ -157,7 +172,7 @@ body a {
     float: left;
 }
 
-.filtres .icones_texte .icones_filtres i:hover { /*changement d'apparence au survol*/
+.filtres .icones_texte:hover .icones_filtres i { /*changement d'apparence au survol*/
     color: white;
  }
  
@@ -439,16 +454,6 @@ body a {
 
 
 
-
-/*.en_tete_mobile {}*/
-
-/* tablette */
-/*@media screen and (min-width: 640px) and (max-width: 900px) {
-.en_tete {
-    display: none;
-}*/
-
-
 /* mobile */
 @media all and (max-width: 768px) {
 
@@ -457,6 +462,110 @@ body a {
         box-sizing: border-box;
     }
 
+    /*body .container {
+        margin: 0 auto;
+        padding: 0 0;
+    }*/
+
+
+    .en_tete {
+        display: none;
+    }
+
+    .en_tete_mobile {
+        display: initial;
+    }
+
+    .en_tete_mobile .sous-en-tete {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .en_tete_mobile .menu {
+        display: flex; /*flexbox pour les nav*/
+        flex-direction: row;  
+        margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
+        width: 100%;
+    }
+
+    
+    .en_tete_mobile .logo {
+        max-width: 100px;/*définition largeur principale*/
+    }
+    .en_tete_mobile .logo1 { /*redimensionnement logo*/
+        width: 120px;
+        height: 100%;
+    }
+
+    
+
+    .en_tete_mobile .menu li:hover a {
+        color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
+    }
+
+
+    .en_tete_mobile .menu li {
+        
+        border-bottom: 2px solid #F2F2F2; 
+        min-width: 50%; 
+        padding-left: 10px;
+    }
+
+    .en_tete_mobile .menu a {
+        display: block;/*padding sur les a du menu(bloc ul)*/
+        padding: 20px;
+    }
+
+    .en_tete_mobile .menu li:hover{
+        border-bottom: 2px solid #0065FC;  
+    }
+
+    .en_tete_mobile .menu .active {
+        color: #0065FC;
+    }
+
+    .en_tete_mobile .sous-en-tete .inscription {
+        color: #0065FC;
+        font-weight: bold;
+    }
+
+    .zone_saisie {
+        width: 305px;
+    }
+
+    .zone_saisie button {
+        width: 50px;
+        border-radius: 11px;
+    }
+
+    .zone_saisie button .bouton_pc {
+        display: none;
+    }
+
+    .zone_saisie button .bouton_mobile {
+        display: initial;
+    }
+
+
+    .filtres {
+        flex-wrap: wrap;
+        margin-top: 15px;
+        line-height: 25px;
+    }
+    
+    .filtres .filtres-titre {
+        min-width: 100%;
+        padding-left: 8px;
+        
+    }
+
+    .filtres .icones_texte {
+        margin: 5px;
+    }
+    
     .section_une {
         
         flex-direction: column-reverse;
@@ -498,16 +607,10 @@ body a {
     } 
 
 
-    .filtres {
-        flex: 1;
-        min-width: 45%;
-        flex-direction: row;
-        margin-top: 10px;
-        font-weight: bold;
-        line-height: 60px; 
-        flex-wrap: wrap;  
-    }
 
+    
+    
+    
     .blocC .blocC2 .activites_blocC {
         width: 100%;
         background-color: white;
@@ -518,7 +621,7 @@ body a {
     .blocC .blocC2 {
         display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
         flex-direction: column;
-        justify-content: space-between;
+        
     }
 
     .blocC .blocC2 .activites_blocC  .block .bloc_img1 {
@@ -676,7 +779,10 @@ body a {
     .bas_de_page {
 
         margin-top: 50px;
-        flex-direction: column;
+        
+    }
+
+    .bas_de_page .bloc_footer {
         width: 100%;
     }
 }
