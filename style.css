@@ -69,13 +69,7 @@ body a {
     border-top: 2px solid #0065FC;  
 }
 
-/*.en_tete .menu li.active a, li:hover {
-    border-top: 2px solid #0065FC;
-}*/
 
-/*.en_tete .menu li.active a, li:hover a {
-    border-top: 2px solid #0065FC
-}*/
 
 .en_tete .menu li.active a {
     color: #0065FC;
@@ -313,7 +307,8 @@ body a {
 
 .blocB .blocB1 .hotels_blocB .block-img {
     max-width: 150px;
-    height: 100%; 
+    /*width: 150px;*/
+    height: 100%;
     overflow: hidden;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
     border-bottom-left-radius: 20px;/*arrondissement de la bordure haut à droite*/
@@ -490,6 +485,10 @@ body a {
         margin: 0;
         box-sizing: border-box;
     }
+
+    body .container {
+        padding: 0;
+    }
     
     .en_tete {
         display: none;
@@ -498,9 +497,7 @@ body a {
     .en_tete_mobile {
         display: initial;
     }
-
-
-
+    
     .en_tete_mobile .sous-en-tete {
         display: flex;
         flex-direction: row;
@@ -514,6 +511,10 @@ body a {
         flex-direction: row;  
         margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
         width: 100%;    
+    }
+
+    .en_tete_mobile .sous-en-tete1, .info {
+        padding: 0 20px;
     }
 
     
@@ -546,7 +547,6 @@ body a {
         
         border-bottom: 2px solid #F2F2F2; 
         min-width: 50%; 
-        padding-left: 10px;
         text-align: center;
     }
     
@@ -588,6 +588,7 @@ body a {
         flex-wrap: wrap;
         margin-top: 15px;
         line-height: 25px;
+        padding: 0 20px;
     }
     
     .filtres .filtres-titre {
@@ -626,12 +627,16 @@ body a {
         background-color: white;
         width: auto;
         display: flex;/*flexbox pour hébergement pour hebergements et blocA1*/
-
+        padding: 0 20px;
     }
     
     .blocA .blocA1 .hotels_blocA {
         background-color: white;
     } 
+
+    .blocC {
+        padding: 0 20px;
+    }
     
     .blocC .blocC2 .activites_blocC {
         width: 100%;
@@ -730,19 +735,7 @@ body a {
 
        }
 
-       .blocB .blocB1 .hotels_blocB {
-        height: 165px;
-        width: auto;
-        border: 1px solid white;
-        border-radius: 20px;
-        background-color: white;
-        padding: 4px;
-        box-sizing: border-box;
-        margin: 20px;
-        display: flex;/*flexbox pour chaque hôtel*/
-        flex-direction: row;
-        box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc B*/
-    }
+
 
       
         .blocA {
@@ -792,4 +785,6 @@ body a {
         background-color: #DEEBFF;
     }
     
+
+
 }
