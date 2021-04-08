@@ -56,6 +56,8 @@ body a {
 
 .en_tete .menu li.active, li:hover  {
     border-top: 2px solid #0065FC;
+}
+
 .en_tete .menu a {
     display: block;/*padding sur les a du menu(bloc ul)*/
     padding: 20px;
