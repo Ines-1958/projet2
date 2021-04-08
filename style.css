@@ -9,6 +9,7 @@ body .container {
     padding: 0 20px;
 }
 
+
 body ul {
     list-style-type: none;/*pas de style de liste à puces*/
     padding: 0;
@@ -47,21 +48,34 @@ body a {
 }
 
 
+
 .en_tete .menu li {
     
     border-top: 2px solid white;  
 }
 
+.en_tete .menu li.active, li:hover  {
+    border-top: 2px solid #0065FC;
 .en_tete .menu a {
     display: block;/*padding sur les a du menu(bloc ul)*/
     padding: 20px;
 }
 
-.en_tete .menu li:hover{
+
+
+.en_tete .menu li:hover {
     border-top: 2px solid #0065FC;  
 }
 
-.en_tete .menu .active {
+/*.en_tete .menu li.active a, li:hover {
+    border-top: 2px solid #0065FC;
+}*/
+
+/*.en_tete .menu li.active a, li:hover a {
+    border-top: 2px solid #0065FC
+}*/
+
+.en_tete .menu li.active a {
     color: #0065FC;
 }
 
@@ -452,6 +466,19 @@ body a {
     margin-bottom: 10px;
 }
 
+.bas_de_page .bloc_footer li:hover  {
+    border-top: none;
+    text-transform: uppercase;
+    
+}
+
+.bas_de_page .bloc_footer li:hover a {
+    color: #0065FC;
+    background-color: #DEEBFF;
+}
+
+
+
 
 
 /* mobile */
@@ -461,13 +488,7 @@ body a {
         margin: 0;
         box-sizing: border-box;
     }
-
-    /*body .container {
-        margin: 0 auto;
-        padding: 0 0;
-    }*/
-
-
+    
     .en_tete {
         display: none;
     }
@@ -476,19 +497,21 @@ body a {
         display: initial;
     }
 
+
+
     .en_tete_mobile .sous-en-tete {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 20px;
+        margin: 20px;    
     }
 
     .en_tete_mobile .menu {
         display: flex; /*flexbox pour les nav*/
         flex-direction: row;  
         margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
-        width: 100%;
+        width: 100%;    
     }
 
     
@@ -499,31 +522,40 @@ body a {
         width: 120px;
         height: 100%;
     }
-
     
+    .en_tete_mobile .menu li {
+        border-top: none;
+        
+    }
 
     .en_tete_mobile .menu li:hover a {
         color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
-    }
-
-
-    .en_tete_mobile .menu li {
-        
-        border-bottom: 2px solid #F2F2F2; 
-        min-width: 50%; 
-        padding-left: 10px;
-    }
-
-    .en_tete_mobile .menu a {
-        display: block;/*padding sur les a du menu(bloc ul)*/
-        padding: 20px;
     }
 
     .en_tete_mobile .menu li:hover{
         border-bottom: 2px solid #0065FC;  
     }
 
-    .en_tete_mobile .menu .active {
+    .en_tete_mobile .menu li.active, li:hover {
+        border-bottom: 2px solid #0065FC;
+    }
+
+    .en_tete_mobile .menu li {
+        
+        border-bottom: 2px solid #F2F2F2; 
+        min-width: 50%; 
+        padding-left: 10px;
+        text-align: center;
+    }
+    
+    
+    
+    .en_tete_mobile .menu a {
+        display: block;/*padding sur les a du menu(bloc ul)*/
+        padding: 20px;
+    }
+    
+    .en_tete_mobile .menu li.active a {
         color: #0065FC;
     }
 
@@ -565,6 +597,8 @@ body a {
     .filtres .icones_texte {
         margin: 5px;
     }
+
+
     
     .section_une {
         
@@ -574,115 +608,74 @@ body a {
 
     .section_une #hebergements, .afficher {
         padding-left: 5px;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
        
-       .blocB {
+    .blocB {
         background-color: #F2F2F2;
         width: auto;
         display: flex;
         flex-direction: column;/*activation flexbox pour le blocB et les plus populaires*/
-        
-       }
-       
-
-
-       .blocA {
+        border-radius: 0;
+    }
+    
+    .blocA {
         background-color: white;
-        border: 1px solid none;
-        border-radius: 20px;
         width: auto;
         display: flex;/*flexbox pour hébergement pour hebergements et blocA1*/
-        flex-direction: column;
-        margin-top: 20px;
+
     }
     
     .blocA .blocA1 .hotels_blocA {
-        width: 100%;
         background-color: white;
-        padding: 4px;
-        box-sizing: border-box;
-        margin-bottom: 2%;
-        border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
-        box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
     } 
-
-
-
-    
-    
     
     .blocC .blocC2 .activites_blocC {
         width: 100%;
-        background-color: white;
-        box-sizing: border-box;
-        padding: 4px; 
+        padding: 10px;
     }
 
     .blocC .blocC2 {
-        display: flex;/*activation de la flexbox sur l'axe principal deu blocC (activités à Marseille)*/
-        flex-direction: column;
-        
+        flex-direction: column;/*organisation des éléments en colonne pour le responsive*/   
     }
 
     .blocC .blocC2 .activites_blocC  .block .bloc_img1 {
         width: auto;
         height: 150px; 
-       /* max-height: inherit;*/
-        overflow: hidden;
-        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-        border-top-right-radius: 20px;  
-        margin-bottom: 10px;
+        max-height: inherit;
     }
 
     .blocC .blocC2 .activites_blocC  .block .bloc_img1 .img1 {
         width: 100%;
         height: 100%;
-        object-fit: cover;
     }
 
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img2 {
         width: auto;
         height: 150px;
-        margin-bottom: 10px;/*marge extérieure inférieure*/
+       /* margin-bottom: 10px;/*marge extérieure inférieure*/
     }
     
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img3 {
         width: auto;
-        height: 150px;  /*padding-bottom de 11px(140-11px pour avoir le même niveau que les autres blocs)*/
-        margin-top: 10px;
+        height: 150px; 
+       /* margin-top: 10px;*/
         padding-bottom: 10px;/*marge intérieure inférieure pour espacer les élements*/
     }
 
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img4 {
         width: auto;
         height: 150px;
-        margin-bottom: 10px;/*marge extérieure inférieure*/
+       /* margin-bottom: 10px;/*marge extérieure inférieure*/
     }
 
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img5 {
         width: auto;
         height: 150px; /*padding-bottom de 11px(190-11px pour avoir le même niveau que les autres blocs)*/
-        margin-top: 20px;
+       /* margin-top: 20px;
         padding-bottom: 10px;/*marge extérieure inférieure*/
     }
-
-    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img2 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-        border-top-right-radius: 20px;   
-    }
-    
-    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img3 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-        border-top-right-radius: 20px;
-    }
-
-    
 
 
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img4 {
@@ -693,16 +686,6 @@ body a {
         border-top-right-radius: 20px;
         margin-bottom: 10px;
     }
-    
-    
-    
-    .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .img5 {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
-        border-top-right-radius: 20px;
-    }
 
      .bas_de_page {
 
@@ -711,6 +694,16 @@ body a {
          width: 100%;
      }
 
+     .bas_de_page .bloc_footer li:hover  {
+        border-top: none;
+        text-transform: uppercase;
+        
+    }
+    
+    .bas_de_page .bloc_footer li:hover a {
+        color: #0065FC;
+        background-color: #DEEBFF;
+    }
     
 
 }
@@ -785,4 +778,16 @@ body a {
     .bas_de_page .bloc_footer {
         width: 100%;
     }
+
+    .bas_de_page .bloc_footer li:hover  {
+        border-bottom: none;
+        text-transform: uppercase;
+        
+    }
+    
+    .bas_de_page .bloc_footer li:hover a {
+        color: #0065FC;
+        background-color: #DEEBFF;
+    }
+    
 }
