@@ -35,19 +35,22 @@ body a {
   height: 100%;
 }
 
+.en_tete .nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
 .en_tete .menu {
 
     display: flex; /*flexbox pour les nav*/
     flex-direction: row;  
-    margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
-    
+    margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/   
 }
 
 .en_tete .menu li:hover a {
     color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
 }
-
-
 
 .en_tete .menu li {
     
@@ -63,32 +66,52 @@ body a {
     padding: 20px;
 }
 
-
-
 .en_tete .menu li:hover {
     border-top: 2px solid #0065FC;  
 }
-
-
 
 .en_tete .menu li.active a {
     color: #0065FC;
 }
 
-.en_tete .menu .inscription {
+.en_tete .nav-bar .inscrire {
+    border-top: 2px solid white;  
+}
+
+.en_tete .nav-bar .inscrire a {
     color: #0065FC;
     font-weight: bold;
+    padding: 20px;
+}
+
+.en_tete .nav-bar .inscrire:hover a {
+    border-top: 2px solid #0065FC;
 }
 
 .en_tete_mobile {
     display: none;
 }
 
+input::-webkit-input-placeholder {
+    color: black;
+}
+
+input::-moz-placeholder {
+    color: black;
+}
+
+input:-moz-placeholder {
+    color: black;
+}
+
+
+
+
+
 
 #rechercher
 {
     font-weight: bold;
-    color: white;
     margin: auto;
     padding: 0;
 }
@@ -138,6 +161,13 @@ body a {
 
 .icone {
     color:  #0065FC;/*couleur icones filtres et info*/
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
 }
 .info span i {
     
@@ -262,8 +292,6 @@ body a {
 
 .blocA .blocA1 .hotels_blocA .block-text p {
     margin-top: 5px;
-    
-    /*margin-bottom: 5px;/*suppression des marges automatiques autour de p, au profit des marges top et bottom*/
 }
 
 .blocB {
@@ -307,7 +335,6 @@ body a {
 
 .blocB .blocB1 .hotels_blocB .block-img {
     max-width: 150px;
-    /*width: 150px;*/
     height: 100%;
     overflow: hidden;
     border-top-left-radius: 20px; /*arrondissement de la bordure haut à gauche*/
@@ -550,8 +577,6 @@ body a {
         text-align: center;
     }
     
-    
-    
     .en_tete_mobile .menu a {
         display: block;/*padding sur les a du menu(bloc ul)*/
         padding: 20px;
@@ -564,6 +589,10 @@ body a {
     .en_tete_mobile .sous-en-tete .inscription {
         color: #0065FC;
         font-weight: bold;
+    }
+
+    .sous-en-tete1 {
+        padding: 0 20px;
     }
 
     .zone_saisie {
@@ -599,6 +628,17 @@ body a {
 
     .filtres .icones_texte {
         margin: 5px;
+    }
+
+    .info span i {
+    
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+
+    .info p {
+        padding-top: 20px;
     }
 
 
@@ -667,21 +707,17 @@ body a {
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img3 {
         width: auto;
         height: 150px; 
-       /* margin-top: 10px;*/
         padding-bottom: 10px;/*marge intérieure inférieure pour espacer les élements*/
     }
 
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img4 {
         width: auto;
         height: 150px;
-       /* margin-bottom: 10px;/*marge extérieure inférieure*/
     }
 
     .blocC .blocC2 .activites_blocC .activites_blocC1 .blocC1_img .block .bloc_img5 {
         width: auto;
         height: 150px; /*padding-bottom de 11px(190-11px pour avoir le même niveau que les autres blocs)*/
-       /* margin-top: 20px;
-        padding-bottom: 10px;/*marge extérieure inférieure*/
     }
 
 
@@ -730,14 +766,10 @@ body a {
        .blocB {
         background-color: #F2F2F2;
         width: auto;
-        flex-direction: column;/*activation flexbox pour le blocB et les plus populaires
-        justify-content: start;/*à revoir*/
-
+        flex-direction: column;/*activation flexbox pour le blocB et les plus populaires*/
        }
 
 
-
-      
         .blocA {
         background-color: white;
         border: 1px solid none;
@@ -756,12 +788,6 @@ body a {
         border-radius: 20px; /*arrondissement des bordures des hôtels_blocA*/
         box-shadow: 2px 2px 2px 1px silver;/*ombre autour des hôtels du bloc A*/
     } 
-
-
-   
-
-    
-
 
 
     .bas_de_page {
@@ -786,7 +812,7 @@ body a {
     }
     
     .blocC2 h3 {
-        font-size:15px;
+        font-size: 15px;
     }
 
 }
