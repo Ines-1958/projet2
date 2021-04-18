@@ -288,6 +288,7 @@ body a {
 
 
 .blocB .blocB1 .hotels_blocB .block-img {
+    min-width: 150px;
     max-width: 150px;
     height: 100%;
     overflow: hidden;
