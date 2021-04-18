@@ -20,88 +20,42 @@ body a {
     color: black;
 }
 
-.en_tete
+.en_tete nav
 {
     display: flex; /*flexbox pour l'en-tête*/
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.en_tete .logo {
-    max-width: 100px;/*définition largeur principale*/
+.en_tete nav .logo {
+    width: calc(100% - 360px);
 }
-.en_tete .logo1 { /*redimensionnement logo*/
+.en_tete nav .logo1 { /*redimensionnement logo*/
   width: 120px;
   height: 100%;
 }
 
-.en_tete .nav-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-}
-
-.en_tete .menu {
-
-    display: flex; /*flexbox pour les nav*/
-    flex-direction: row;  
-    margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/   
-}
-
-.en_tete .menu li:hover a {
-    color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
-}
-
-.en_tete .menu li {
+.en_tete nav a {
     
     border-top: 2px solid white;  
-}
-
-.en_tete .menu li.active, li:hover  {
-    border-top: 2px solid #0065FC;
-}
-
-.en_tete .menu a {
-    display: block;/*padding sur les a du menu(bloc ul)*/
     padding: 20px;
+    width: 120px;
+    text-align: center;
 }
 
-.en_tete .menu li:hover {
-    border-top: 2px solid #0065FC;  
-}
-
-.en_tete .menu li.active a {
+.en_tete nav a.active, nav a:hover  {
+    border-top: 2px solid #0065FC;
     color: #0065FC;
 }
 
-.en_tete .nav-bar .inscrire {
-    border-top: 2px solid white;  
-}
-
-.en_tete .nav-bar .inscrire a {
-    color: #0065FC;
+.en_tete nav a.menu_inscription {
     font-weight: bold;
-    padding: 20px;
+    color: #0065FC;
 }
 
-.en_tete .nav-bar .inscrire:hover a {
-    border-top: 2px solid #0065FC;
-}
-
-.en_tete_mobile {
-    display: none;
-}
-
-input::-webkit-input-placeholder {
+#rechercher::placeholder, #rechercher::-webkit-input-placeholder {
     color: black;
-}
-
-input::-moz-placeholder {
-    color: black;
-}
-
-input:-moz-placeholder {
-    color: black;
+    opacity: 1;
 }
 
 
@@ -516,83 +470,42 @@ input:-moz-placeholder {
     body .container {
         padding: 0;
     }
-    
-    .en_tete {
-        display: none;
+
+    header > :not(.en_tete) {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
-    .en_tete_mobile {
-        display: initial;
-    }
-    
-    .en_tete_mobile .sous-en-tete {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 20px;    
+    nav {
+        flex-wrap: wrap;
+        width:100%;
     }
 
-    .en_tete_mobile .menu {
-        display: flex; /*flexbox pour les nav*/
-        flex-direction: row;  
-        margin-top: 0; /*suppression de la marge top sur le menu de navigation (ul)*/
-        width: 100%;    
+    .logo {
+        order: 1;
+        width: calc(50% - 20px) !important;
+        padding-left: 20px;
     }
 
-    .en_tete_mobile .sous-en-tete1, .info {
-        padding: 0 20px;
+    .menu_inscription {
+        order: 2;
+        width: calc(50% - 40px) !important;
+        text-align: right !important;
     }
 
-    
-    .en_tete_mobile .logo {
-        max-width: 100px;/*définition largeur principale*/
-    }
-    .en_tete_mobile .logo1 { /*redimensionnement logo*/
-        width: 120px;
-        height: 100%;
-    }
-    
-    .en_tete_mobile .menu li {
-        border-top: none;
-        
-    }
-
-    .en_tete_mobile .menu li:hover a {
-        color: #0065FC;/*couleur bleue au survol des liens de l'en_tete classe menu*/
-    }
-
-    .en_tete_mobile .menu li:hover{
-        border-bottom: 2px solid #0065FC;  
-    }
-
-    .en_tete_mobile .menu li.active, li:hover {
-        border-bottom: 2px solid #0065FC;
-    }
-
-    .en_tete_mobile .menu li {
-        
-        border-bottom: 2px solid #F2F2F2; 
-        min-width: 50%; 
-        text-align: center;
-    }
-    
-    .en_tete_mobile .menu a {
-        display: block;/*padding sur les a du menu(bloc ul)*/
-        padding: 20px;
-    }
-    
-    .en_tete_mobile .menu li.active a {
+    .menu_hebergement {
+        order: 3;
+        width: calc(50% - 40px) !important;
         color: #0065FC;
+        border-top: none !important;
+        border-bottom: solid 2px #0065FC;
     }
 
-    .en_tete_mobile .sous-en-tete .inscription {
-        color: #0065FC;
-        font-weight: bold;
-    }
-
-    .sous-en-tete1 {
-        padding: 0 20px;
+    .menu_activites {
+        order: 4;
+        width: calc(50% - 40px) !important;
+        border-top: none !important;
+        border-bottom: solid 2px #F2F2F2;
     }
 
     .zone_saisie {
